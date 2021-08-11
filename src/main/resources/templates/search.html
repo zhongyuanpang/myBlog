@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+
+<head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- 引入css -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.css">
+        <link rel="stylesheet" type="text/css" href="../static/css/me.css" th:href="@{/css/me.css}" />
+        <link rel="stylesheet" type="text/css" href="../static/css/search.css" th:href="@{/css/search.css}" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+        <title>搜索结果</title>
+</head>
+
+<body>
+
+        <!-- 导航 -->
+        <nav  th:replace="_fragments :: menu(1)" class="ui inverted  segment m-padded-tb-mini  m-shadow-small">
+                <!-- 头部container容器 -->
+                <div class="ui contaniner">
+                        <!-- 
+                                1、stackable：响应式导航可自动收缩
+                         -->
+                        <div class="ui inverted secondary stackable menu">
+                                <!-- 
+                                        teal ：颜色
+                                -->
+                                <h2 class="ui teal header item">MyBlog</h2>
+                                <a href="#" class="m-item item m-mobile-hide"> <i class="home icon"></i>首页</a>
+                                <a href="#" class="m-item item m-mobile-hide"> <i class="idea icon"></i>分类</a>
+                                <a href="#" class="m-item item m-mobile-hide"> <i class="tags icon"></i> 标签</a>
+                                <a href="#" class="m-item item m-mobile-hide"> <i class="clone icon"></i> 归档</a>
+                                <a href="#" class="m-item item m-mobile-hide"> <i class="info icon"></i> 关于我</a>
+                                <div class="right m-item item m-mobile-hide">
+                                        <div class="ui icon transparent inverted input">
+                                                <input type="text" placeholder="Search...">
+                                                <i class="icon link search"></i>
+                                        </div>
+                                </div>
+                        </div>
+                </div>
+                <a href="#" class="ui button black icon menu toggle m-right-top m-mobile-show">
+                        <i class="sidebar icon"></i>
+                </a>
+        </nav>
+
+        <div class="aftertype">
+            <h3>search</h3>
+        </div>
+
+        <!-- 中间内容 -->
+        <div class="m-padded-tb-big m-container-tiny">
+                <div class="ui container">
+                    <!-- Header -->
+                    <div class="ui top attached">
+                        <!-- 注意grid要写在column后面 不然会效果失效 -->
+                            <div class="ui middle aligned two column grid">
+                                    <div class="column">
+                                            <h3 class="ui m-999 header">搜索结果</h3>
+                                    </div>
+                                    <div class=" right aligned column m-999">
+                                            共 <h2 class="ui orange header m-inline-block m-text-thin" th:text="${page.totalElements}">14</h2> 个
+                                    </div>
+                            </div>
+                    </div>
+
+
+
+                    <!-- 文章列表 -->
+                    <div class="ui ">
+
+                        <div class="ui attached m-margin-top-small blog_list wow animate__animated animate__fadeInTopRight" th:each="blog : ${page.content}">
+                            <!-- 加入vertical 列表就是垂直样式，但是个人觉得不好看先不加 segment -->
+                            <!-- 列表  -->
+                            <div class="ui padded">
+                                <div class="ui middle aligned mobile reversed stackable grid " >
+                                    <div class="eleven wide column ">
+                                        <h3 class="ui header "><a href="#" th:href="@{/blog/{id}(id=${blog.id})}" target="_blank" th:text="${blog.title}" class="m-999 left-to-right">Title</a></h3>
+                                        <p class="m-text m-999" th:text="|${blog.description}....|">6月1日0—24时,31个省(自治区、直辖市)和新疆生产建设兵团报告新增确诊病例24例,其中境外输入病例14例(上海6例,福建3例,广东3例,四川1例,云南1例),本土病例10例(均在广东);无...</p>
+                                        <div class="ui grid">
+                                            <!-- 十一份 -->
+                                            <div class="thirteen wide column">
+                                                <div class="ui horizontal link list">
+                                                    <div class="item">
+                                                        <img th:src="@{${blog.user.avatar}}" src="https://images.unsplash.com/photo-1590806758167-be790f75a167?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxleHBsb3JlLWZlZWR8NTV8fHxlbnwwfHx8fA%3D%3D&auto=format&fit=crop&w=500&q=60" alt="" class="ui avatar image">
+                                                        <div class="content">
+                                                            <a class="header" th:text="${blog.user.nickname}">庞中原</a>
+                                                        </div>
+                                                    </div>
+                                                    <div class="item">
+                                                        <!--                                                                                                                                                                    格式化时间  #dates.format(时间,'yyyy-MM-dd')     -->
+                                                        <i class="calendar alternate outline icon m-999 m-ft-small"></i> <span class="m-999 m-ft-small" th:text="${#dates.format(blog.updateTime,'yyyy-MM-dd')}">2021-06-03</span>
+                                                    </div>
+                                                    <div class="item">
+                                                        <i class="eye icon m-999 m-ft-small"></i> <span class="m-999 m-ft-small" th:text="${blog.views}">999</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <!-- 五份 -->
+                                            <div class="right aligned three wide column">
+                                                <a href="#" target="_blank" class="ui teal label m-999" th:text="${blog.type.name}">标签</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="five wide column">
+                                        <a href="#" th:href="@{/blog/{id}(id=${blog.id})}" target="_blank">
+                                            <img src="https://images.unsplash.com/photo-1475776408506-9a5371e7a068?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=654&q=80" th:src="@{${blog.firstPicture}}" alt="" class="ui rounded image firstPicture">
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+
+                    </div>
+
+                    <!-- Footer -->
+                    <div class="ui attached m-shadow-82C6E0" th:if="${page.totalPages}>1">
+                        <!-- 注意grid要写在column后面 不然会效果失效 -->
+                        <div class="ui middle aligned two column grid">
+                            <div class="column">
+                                <a th:href="@{/(page=${page.number}-1)}"  th:unless="${page.first}" class="ui secondary mini button">上一页</a>
+                            </div>
+                            <div class=" right aligned column">
+                                <a th:href="@{/(page=${page.number}+1)}" th:unless="${page.last}" class="ui secondary mini button">下一页</a>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+        </div>
+
+        <br>
+        <br>
+        <br>
+        <br>
+        <!-- 底部 -->
+        <footer th:replace="_fragments :: footer" class="ui inverted vertical stackable segment m-padded-tb-massive">
+                <div class="ui  center aligned container">
+                <!-- 
+                    1、inverted：用来反转颜色
+                    2、divided：分割线
+                    3、grid：与bootstarp的row类似，共分为16块
+                    4、three wide column：每列站3块撑满
+                    5、ui medium rounded  image：给图片加圆角
+                 -->
+                        <div class="ui inverted divided stackable grid">
+                                <div class="three wide column">
+                                        <div class="ui inverted link list">
+                                                <div class="item">
+                                                        <img src="../static/images/wechat.jpg" class="ui  rounded  image" alt=""
+                                                                style="width: 110px;">
+                                                </div>
+                                        </div>
+                                </div>
+                                <div class="four wide column">
+                                        <h4 class=" ui inverted header m-text">最新博客</h4>
+                                        <div class="ui inverted link list">
+                                                <a href="#" class="item">xxxx</a>
+                                                <a href="#" class="item">xxxx</a>
+                                                <a href="#" class="item">xxxx</a>
+                                        </div>
+                                </div>
+                                <div class="four wide column">
+                                        <h4 class=" ui inverted header m-text">联系我</h4>
+                                        <div class="ui inverted link list">
+                                                <a href="#" class="item">xxxx</a>
+                                                <a href="#" class="item">xxxx</a>
+                                                <a href="#" class="item">xxxx</a>
+                                        </div>
+                                </div>
+                                <div class="five wide column">
+                                        <h4 class=" ui inverted header m-text">Blog</h4>
+                                        <p class="m-text">xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</p>
+                                </div>
+                        </div>
+
+                        <!-- 分割线 -->
+                        <div class="ui inverted section divider"></div>
+                        <!-- 底部备案信息 -->
+                        <p class="m-text ">xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</p>
+
+                </div>
+        </footer>
+
+        <!--/*/<th:block th:replace="_fragments :: script">/*/-->
+        <script src="https://cdn.jsdelivr.net/npm/jquery@3.2/dist/jquery.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+        <!--/*/</th:block>/*/-->
+
+        <script>
+                $(function(){
+                        $('.menu.toggle').click(function(){
+                                $('.m-item').toggleClass("m-mobile-hide");
+                        })
+                })
+        </script>
+</body>
+
+</html>

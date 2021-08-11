@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head th:fragment="head(title)">
+    <meta charset="UTF-8">
+    <title th:replace="${title}">Title</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <link rel="icon" href="../static/images/favicon.ico" th:href="@{/images/favicon.ico}" type="image/x-icon" />
+    <!-- 引入css -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.css">
+    <!-- 内容排版 -->
+    <link rel="stylesheet" href="../static/css/typo.css" th:href="@{/css/typo.css}">
+    <!-- 引入代码高亮 -->
+    <link rel="stylesheet" href="../static/lib/prism/themes/prism-vsc-dark-plus.css" th:href="@{/lib/prism/themes/BlackMac.css}">
+    <!-- 引入生成目录 -->
+    <link rel="stylesheet" href="../static/lib/tocbot/tocbot.css" th:href="@{/lib/tocbot/tocbot.css}">
+    <link rel="stylesheet" type="text/css" href="../static/css/me.css" th:href="@{/css/me.css}" />
+    <link rel="stylesheet" type="text/css" href="../static/css/blog.css" th:href="@{/css/blog.css}" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+</head>
+<body>
+    <!-- 导航 -->
+    <nav id="navTop" th:fragment="menu(n)" class="ui m-padded-tb-mini ">
+        <!-- 头部container容器 -->
+        <div class="ui contaniner">
+            <!--
+                    1、stackable：响应式导航可自动收缩
+             -->
+            <div class="ui inverted secondary stackable menu">
+                <!--
+                        teal ：颜色
+                -->
+                <h2 class="ui white header item"><img src="" th:src="@{/images/logo.png}" style="height: 30px;width: 30px;margin-right: 5px">LPblog</h2>
+                <a href="#" th:href="@{/}" class="m-item item m-mobile-hide" th:classappend="${n==1} ? 'active':'' "> <i class="home icon"></i>首页</a>
+                <a href="#" th:href="@{/types/-1}" class="m-item item m-mobile-hide" th:classappend="${n==2} ? 'active':'' "> <i class="idea icon"></i>分类</a>
+                <a href="#" th:href="@{/tags/-1}" class="m-item item m-mobile-hide" th:classappend="${n==3} ? 'active':'' "> <i class="tags icon"></i> 标签</a>
+                <a href="#" th:href="@{/archives}" class="m-item item m-mobile-hide" th:classappend="${n==4} ? 'active':'' "> <i class="clone icon"></i> 归档</a>
+                <a href="#" th:href="@{/about}" class="m-item item m-mobile-hide" th:classappend="${n==5} ? 'active':'' "> <i class="info icon"></i> 关于我</a>
+
+                <div class="right m-item item m-mobile-hide">
+                    <form name="search" action="#" th:action="@{/search}" method="post" >
+                        <div class="ui icon transparent inverted input category search">
+                            <input type="text" class="prompt" name="query" placeholder="Search..." th:value="${query}">
+                            <i onclick="document.forms['search'].submit()" class="icon link search"></i>
+                        </div>
+                    </form>
+
+                </div>
+
+                <a href="#" th:href="@{/admin/}" class="m-item item m-mobile-hide" th:classappend="${n==6} ? 'active':'' "> <i class="user circle icon"></i>后台</a>
+            </div>
+        </div>
+        <!--        <a href="#" class="ui button black icon menu toggle m-right-top m-mobile-show">-->
+        <!--            <i class="sidebar icon"></i>-->
+        <!--        </a>-->
+        <a href="#" id="slide" class="ui button black icon menu m-right-top m-mobile-show">
+            <i class="sidebar icon"></i>
+        </a>
+
+        <div class="ui sidebar inverted vertical menu sider_menu"  id="app">
+            <div class="slid_title">
+                <!--                <h2 class="ui blue header">李麻花的博客^^</h2>-->
+            </div>
+            <div class="slid_avatar" v-if="user_info.user">
+                <img th:src="@{https://img1.baidu.com/it/u=4049017199,2645921319&fm=26&fmt=auto&gp=0.jpg}" />
+                <div style="margin-top: 10px">{{ user_info.user.nickname }}</div>
+            </div>
+            <div class="slid_blog_info" v-if="user_info.blog">
+                <div>
+                    <div>文章</div>
+                    <div>{{ user_info.blog.blogCount }}</div>
+                </div>
+                <div>
+                    <div>分类</div>
+                    <div>{{ user_info.type.typeCount }}</div>
+                </div>
+                <div>
+                    <div>评论</div>
+                    <div>{{ user_info.comment.commentCount }}</div>
+                </div>
+            </div>
+            <div class="slid_nav_menu">
+                <ul>
+                    <li>
+                        <a th:href="@{/}">
+                            <span><i class="home icon"></i></span>
+                            <span>首页</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a th:href="@{/types/-1}">
+                            <span><i class="idea icon"></i></span>
+                            <span>分类</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a th:href="@{/tags/-1}">
+                            <span><i class="tags icon"></i></span>
+                            <span>标签</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a th:href="@{/archives}">
+                            <span><i class="clone icon"></i></span>
+                            <span>归档</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a th:href="@{/about}">
+                            <span><i class="info icon"></i></span>
+                            <span>关于我</span>
+                        </a>
+                    </li>
+                    <br>
+                    <li>
+                        <a>
+                            <form name="search" action="#" th:action="@{/search}" method="post" >
+                                <div class="ui icon transparent inverted input">
+                                    <input type="text" name="query" placeholder="Search..." th:value="${query}">
+                                    <i onclick="document.forms['search'].submit()" class="icon link search"></i>
+                                </div>
+                            </form>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- 右下导航菜单 -->
+    <div th:fragment="toolbar" id="toolbar" class="ui vertical icon buttons m-fixed m-right-bottom" style="width:40px;height:40px;display: none !important;">
+        <button id="toTop-button" style="background-image: url(https://s3.bmp.ovh/imgs/2021/08/364d86433ece2483.png);background-size: cover;" class="ui white button m-black m-radius-20"><i class="chevron up icon"></i></button>
+    </div>
+
+    <!-- 底部 -->
+    <footer th:fragment="footer" class="ui inverted vertical stackable m-padded-tb-massive">
+
+        <div class="ui  center aligned container">
+            <!--
+                1、inverted：用来反转颜色
+                2、divided：分割线
+                3、grid：与bootstarp的row类似，共分为16块
+                4、three wide column：每列站3块撑满
+                5、ui medium rounded  image：给图片加圆角
+             -->
+            <div class="ui inverted divided stackable grid">
+                <div class="three wide column">
+                    <div class="ui inverted link list">
+                        <div class="item">
+                            <img src="../static/images/wechat.jpg" th:src="@{/images/wechat.jpg}" class="ui  rounded  image" alt=""
+                                 style="width: 110px;">
+                        </div>
+                    </div>
+                </div>
+                <div class="four wide column">
+                    <h4 class=" ui inverted header m-text">最新博客</h4>
+                    <div id="newblog-container">
+                        <div class="ui inverted link list" th:fragment="newblogList">
+                            <a href="#" th:href="@{/blog/{id}(id=${blog.id})}" th:each="blog : ${newblogs}" th:text="${newblogs}" class="item">xxxx</a>
+                            <a class="item">此处有BUG,但不改</a>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="four wide column">
+                    <h4 class=" ui inverted header m-text">联系我</h4>
+                    <div class="ui inverted link list">
+                        <a href="#" class="item" th:text="#{index.email}">邮箱</a>
+                        <a href="#" class="item" th:text="#{index.qq}">QQ</a>
+                        <a href="#" class="item" th:text="#{index.wechat}">WeChat</a>
+                    </div>
+                </div>
+                <div class="five wide column">
+                    <h4 class=" ui inverted header m-text">Blog</h4>
+                    <p class="m-text m-white" style="font-size: 1.5em;font-weight: bold;">老庞的博客</p>
+                </div>
+            </div>
+
+            <!-- 分割线 -->
+            <div class="ui inverted section divider"></div>
+
+            <div style="color: #F08047;margin-top: -18px" class="ui inverted m-text-thin m-text-spaced">已经：<span id="htmer_time" class="item m-text-thin"></span></div>
+            <!-- 底部备案信息 -->
+            <p class="m-text "></p>
+        </div>
+    </footer>
+
+
+
+    <th:block th:fragment="script">
+        <script size="90" alpha="0.2" zIndex="0" src="../static/lib/ribbon/ribbon.js" th:src="@{/lib/ribbon/ribbon.js}"></script>
+        <!-- 引入cdn外部js文件 -->
+        <!-- jQuery and JavaScript Bundle with Popper -->
+        <script src="https://cdn.jsdelivr.net/npm/jquery@3.2/dist/jquery.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/jquery.scrollto@2.1.2/jquery.scrollTo.min.js"></script>
+        <script src="../static/lib/prism/prism.js" th:src="@{/lib/prism/prism.js}"></script>
+        <script src="../static/lib/tocbot/tocbot.min.js" th:src="@{/lib/tocbot/tocbot.min.js}"></script>
+        <script src="../static/lib/qrcode/qrcode.min.js" th:src="@{/lib/qrcode/qrcode.min.js}"></script>
+        <script src="../static/lib/waypoints/jquery.waypoints.min.js" th:src="@{/lib/waypoints/jquery.waypoints.min.js}" ></script>
+        <!-- 开发环境版本，包含了有帮助的命令行警告 -->
+        <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+        <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+        <script th:inline="javascript">
+            // 滚动到顶部
+            $('#toTop-button').click(function () {
+                $(window).scrollTo(0,500);
+            });
+
+            //监听页面滚动，显示toolbar
+            window.onscroll = function (e) {
+                //这里是获取页面滚动距离，如果滚动大于30则显示toolbar
+                //如果为0的时候隐藏他
+                var scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
+                if (scrollTop > 30){
+                    $('#toolbar').show(100);
+                }
+                if(scrollTop <=10 ){
+                    $('#toolbar').hide(500);
+                }
+            }
+
+            //侧边栏
+            $("#slide").on('click',function(){
+                $(".ui.sidebar")
+                    .sidebar({
+                        // transition:'slide out' //默认uncover，可以取值push\overlay\slide along\slide out\scale down
+                        transition: 'overlay',
+                        mobileTransition: 'overlay'
+                    })
+                    .sidebar("toggle")
+            })
+
+
+
+            // 运行时间统计
+            function secondToDate(second) {
+                if (!second) {
+                    return 0;
+                }
+                var time = new Array(0, 0, 0, 0, 0);
+                if (second >= 365 * 24 * 3600) {
+                    time[0] = parseInt(second / (365 * 24 * 3600));
+                    second %= 365 * 24 * 3600;
+                }
+                if (second >= 24 * 3600) {
+                    time[1] = parseInt(second / (24 * 3600));
+                    second %= 24 * 3600;
+                }
+                if (second >= 3600) {
+                    time[2] = parseInt(second / 3600);
+                    second %= 3600;
+                }
+                if (second >= 60) {
+                    time[3] = parseInt(second / 60);
+                    second %= 60;
+                }
+                if (second > 0) {
+                    time[4] = second;
+                }
+                return time;
+            }
+            function setTime() {
+                /*此处为网站的创建时间*/
+                var create_time = Math.round(new Date(Date.UTC(2021, 0o2, 5,3,5)).getTime() / 1000);
+                var timestamp = Math.round((new Date().getTime() + 8 * 60 * 60 * 1000) / 1000);
+                currentTime = secondToDate((timestamp - create_time));
+                currentTimeHtml = currentTime[0] + '年' + currentTime[1] + '天'
+                    + currentTime[2] + '时' + currentTime[3] + '分' + currentTime[4]
+                    + '秒';
+                document.getElementById("htmer_time").innerHTML = currentTimeHtml;
+            }
+            setInterval(setTime, 1000);
+
+            var app = new Vue({
+                el:"#app",
+                data:{
+                    user_info:[]
+                },
+                mounted(){
+                    this.getUserInfo();
+                },
+                methods:{
+                    getUserInfo(){
+                        var that = this;
+                        axios.get("/indexGetuserInfo").then(
+                            function(res){
+                                that.user_info = res.data;
+                            }
+                            ,function(err){
+
+                            })
+                    }
+                }
+
+            })
+        </script>
+        <!-- 看板娘插件 -->
+        <script src="https://eqcn.ajz.miesnfu.com/wp-content/plugins/wp-3d-pony/live2dw/lib/L2Dwidget.min.js"></script>
+
+        <script>
+            L2Dwidget.init({
+                "model": {
+                    //jsonpath替换模型
+                    // 和泉纱雾Sagiri
+                    // https://cdn.jsdelivr.net/gh/cat2233/live2D/Sagiri/model.json
+                    // 凉风青叶Aoba
+                    // https://cdn.jsdelivr.net/gh/cat2233/live2D/aoba/model.json
+                    jsonPath: "https://cdn.jsdelivr.net/gh/cat2233/live2D/aoba/model.json",
+                    "scale": 1
+                },
+                "display": {
+                    "position": "left", //看板娘的表现位置
+                    "width": 80,  //宽度
+                    "height": 150, //高度
+                    "hOffset": -20,
+                    "vOffset": 0
+                },
+                "mobile": {
+                    "show": true,
+                    "scale": 0.2
+                },
+                "react": {
+                    "opacityDefault": 1,
+                    "opacityOnHover": 1
+                },
+            });
+
+
+        </script>
+        <!-- wow.js -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
+        <script>
+            wow = new WOW(
+                {
+                    animateClass: 'animated',
+                    offset:       100,
+                    callback:     function(box) {
+                        // console.log("WOW: animating <" + box.tagName.toLowerCase() + ">")
+                    }
+                }
+            );
+            wow.init();
+        </script>
+    </th:block>
+
+
+</body>
+</html>

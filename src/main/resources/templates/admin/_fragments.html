@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head th:fragment="head(title)">
+    <meta charset="UTF-8">
+    <title th:replace="${title}">Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- 引入css -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.css">
+    <!-- 引入markdown插件css文件 -->
+    <link rel="stylesheet" href="../../static/lib/editormd/css/editormd.min.css" th:href="@{/lib/editormd/css/editormd.min.css}">
+    <link rel="stylesheet" type="text/css" href="../static/css/me.css" th:href="@{/css/me.css}" />
+
+</head>
+<body>
+    <nav th:fragment="menu(n)" class="ui m-padded-tb-mini">
+        <!-- 头部container容器 -->
+        <div class="ui contaniner">
+            <!--
+                    1、stackable：响应式导航可自动收缩
+             -->
+            <div class="ui inverted secondary stackable menu">
+                <h2 class="ui teal header item">LP后台管理</h2>
+                <a href="#" th:href="@{/admin/blogs}" class="m-item item m-mobile-hide" th:classappend="${n==1} ? 'active':'' "> <i class="home icon"></i>首页</a>
+                <a href="#" th:href="@{/admin/types}" class="m-item item m-mobile-hide" th:classappend="${n==2} ? 'active':'' "> <i class="idea icon"></i>分类</a>
+                <a href="#" th:href="@{/admin/tags}" class="m-item item m-mobile-hide" th:classappend="${n==3} ? 'active':'' "> <i class="tags icon"></i> 标签</a>
+                <a href="#" th:href="@{/goHome}" class="m-item item m-mobile-hide" > <i class="hand lizard icon"></i> 返回博客主页</a>
+                <div class="right m-item m-mobile-hide menu">
+                    <div class="ui dropdown item">
+                        <div class="text">
+                            <img class="ui avatar image" th:src="@{${session.user.avatar}}" src="https://unsplash.it/100/100?image=1005" >
+                            <span th:text="${session.user.nickname}"></span>
+                        </div>
+                        <i class="dropdown icon"></i>
+                        <div class="menu">
+                            <a href="#" th:href="@{/admin/logout}" class="item">退出登录</a>
+                            <div class="item" data-value="female">Female</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+        <a href="#" class="ui button black icon menu toggle m-right-top m-mobile-show">
+            <i class="sidebar icon"></i>
+        </a>
+    </nav>
+
+
+<!--    &lt;!&ndash; 底部 &ndash;&gt;-->
+<!--    <footer th:fragment="footer" class="ui inverted vertical stackable segment m-padded-tb-massive">-->
+<!--        <div class="ui  center aligned container">-->
+<!--            &lt;!&ndash;-->
+<!--                1、inverted：用来反转颜色-->
+<!--                2、divided：分割线-->
+<!--                3、grid：与bootstarp的row类似，共分为16块-->
+<!--                4、three wide column：每列站3块撑满-->
+<!--                5、ui medium rounded  image：给图片加圆角-->
+<!--             &ndash;&gt;-->
+<!--            <div class="ui inverted divided stackable grid">-->
+<!--                <div class="three wide column">-->
+<!--                    <div class="ui inverted link list">-->
+<!--                        <div class="item">-->
+<!--                            <img src="../static/images/wechat.jpg" th:src="@{/images/wechat.jpg}" class="ui  rounded  image" alt=""-->
+<!--                                 style="width: 110px;">-->
+<!--                        </div>-->
+<!--                    </div>-->
+<!--                </div>-->
+<!--                <div class="four wide column">-->
+<!--                    <h4 class=" ui inverted header m-text">最新博客</h4>-->
+<!--                    <div class="ui inverted link list">-->
+<!--                        <a href="#" class="item">xxxx</a>-->
+<!--                        <a href="#" class="item">xxxx</a>-->
+<!--                        <a href="#" class="item">xxxx</a>-->
+<!--                    </div>-->
+<!--                </div>-->
+<!--                <div class="four wide column">-->
+<!--                    <h4 class=" ui inverted header m-text">联系我</h4>-->
+<!--                    <div class="ui inverted link list">-->
+<!--                        <a href="#" class="item">xxxx</a>-->
+<!--                        <a href="#" class="item">xxxx</a>-->
+<!--                        <a href="#" class="item">xxxx</a>-->
+<!--                    </div>-->
+<!--                </div>-->
+<!--                <div class="five wide column">-->
+<!--                    <h4 class=" ui inverted header m-text">Blog</h4>-->
+<!--                    <p class="m-text">xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</p>-->
+<!--                </div>-->
+<!--            </div>-->
+
+<!--            &lt;!&ndash; 分割线 &ndash;&gt;-->
+<!--            <div class="ui inverted section divider"></div>-->
+<!--            &lt;!&ndash; 底部备案信息 &ndash;&gt;-->
+<!--            <p class="m-text ">xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</p>-->
+
+<!--        </div>-->
+<!--    </footer>-->
+
+
+
+<th:block th:fragment="script">
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.2/dist/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.js"></script>
+    <script src="../../static/lib/editormd/editormd.min.js" th:src="@{/lib/editormd/editormd.min.js}"></script>
+    <script size="90" alpha="0.2" zIndex="0" src="../../static/lib/ribbon/ribbon.js" th:src="@{/lib/ribbon/ribbon.js}"></script>
+</th:block>
+</body>
+</html>
