@@ -54,7 +54,7 @@
 
         <!-- 中间内容 -->
         <div id="waypoint" class="m-padded-tb-big inverted m-container-tiny animated fadeIn b_blog_content">
-            <div class="ui container">
+            <div class="ui">
                     <div class="ui top attached ">
                         <div class="ui horizontal link list">
                                 <div class="item">
@@ -82,10 +82,10 @@
                         <div class="ui segment right aligned basic">
                                 <div class="ui label black basic m-999" th:text="${blog.flag}">原创</div>
                         </div>
-                        <h2 class="ui header center aligned m-999" th:text="${blog.title}">文章标题</h2>
+                        <h3 class="ui header center aligned m-white" th:text="${blog.title}">文章标题</h3>
                         <br>
                         <!-- 文章内容 -->
-                        <div id="content" th:utext="${blog.content}" class="typo typo-selection js-toc-content m-white m-padded-tb-large">
+                        <div id="content" th:utext="${blog.content}" class="typo typo-selection js-toc-content m-padded-tb-large">
 
                         </div>
 
