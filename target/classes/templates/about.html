@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="">
+<head >
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="icon" href="../static/images/favicon.ico" th:href="@{/images/favicon.ico}" type="image/x-icon" />
+        <!-- 引入css -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.css">
+        <link rel="stylesheet" type="text/css" href="../static/css/me.css" th:href="@{/css/me.css}" />
+        <link rel="stylesheet" type="text/css" href="../static/css/about.css" th:href="@{/css/about.css}" />
+        <!-- animate -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+        <title>关于我</title>
+</head>
+
+<body>
+
+        <!-- 导航 -->
+        <nav th:replace="_fragments :: menu(5)" class="ui inverted  segment m-padded-tb-mini  m-shadow-small">
+                <!-- 头部container容器 -->
+                <div class="ui contaniner">
+                        <!-- 
+                                1、stackable：响应式导航可自动收缩
+                         -->
+                        <div class="ui inverted secondary stackable menu">
+                                <!-- 
+                                        teal ：颜色
+                                -->
+                                <h2 class="ui teal header item">MyBlog</h2>
+                                <a href="#" class="m-item item m-mobile-hide"> <i class="home icon"></i>首页</a>
+                                <a href="#" class="m-item item m-mobile-hide"> <i class="idea icon"></i>分类</a>
+                                <a href="#" class="m-item item m-mobile-hide"> <i class="tags icon"></i> 标签</a>
+                                <a href="#" class="m-item item m-mobile-hide"> <i class="clone icon"></i> 归档</a>
+                                <a href="#" class="active m-item item m-mobile-hide"> <i class="info icon"></i> 关于我</a>
+                                <div class="right m-item item m-mobile-hide">
+                                        <div class="ui icon transparent inverted input">
+                                                <input type="text" placeholder="Search...">
+                                                <i class="icon link search"></i>
+                                        </div>
+                                </div>
+                        </div>
+                </div>
+                <a href="#" class="ui button black icon menu toggle m-right-top m-mobile-show">
+                        <i class="sidebar icon"></i>
+                </a>
+        </nav>
+
+
+        <div class="aftertype">
+                <h3>关于我</h3>
+        </div>
+
+
+        <!-- 中间内容 -->
+        <div class="m-padded-tb-big m-container">
+                <div class="ui caontainer">
+                        <div class="ui stackable grid">
+                                <div class="eleven wide column">
+                                        <div class="ui wow animate__animated animate__fadeInLeft">
+                                                <img src="../static/images/34.jpg" th:src="@{https://api.ixiaowai.cn/api/api.php}" alt="" class="ui rounded image m-radius-20">
+                                        </div>
+                                </div>
+                                <div class="five wide column about_box m-margin-tb-large" style="background-image: url(https://api.ixiaowai.cn/gqapi/gqapi.php);background-size: cover;background-position: center center;">
+                                        <div class="ui top attached">
+                                                <div class="ui header m-white"><h2>关于我</h2></div>
+                                        </div>
+                                        <div class="ui attached about_avatar">
+                                                <img th:src="@{https://s3.bmp.ovh/imgs/2021/08/06438835f7c58b4f.jpg}" src="https://img1.baidu.com/it/u=4049017199,2645921319&fm=26&fmt=auto&gp=0.jpg">
+                                                <div class="m-margin-top" style="font-size: 1.3em;font-weight: bolder">老庞</div>
+                                        </div>
+                                        <div class="ui attached">
+                                                <div class="ui header m-white m-padded-tb-small"><h4>我的兴趣爱好</h4></div>
+                                        </div>
+                                        <div class="ui attached ">
+                                                <div class="ui wow animate__animated animate__fadeInRight orange left pointing label m-margin-tb-mini">code</div>
+                                                <div class="ui wow animate__animated animate__fadeInRight orange left pointing label m-margin-tb-mini">王者荣耀</div>
+                                                <div class="ui wow animate__animated animate__fadeInRight orange left pointing label m-margin-tb-mini">游戏</div>
+                                                <div class="ui wow animate__animated animate__fadeInRight orange left pointing label m-margin-tb-mini">音乐</div>
+                                                <div class="ui wow animate__animated animate__fadeInRight orange left pointing label m-margin-tb-mini">小说</div>
+                                                <div class="ui wow animate__animated animate__fadeInRight orange left pointing label m-margin-tb-mini">动漫</div>
+                                        </div>
+                                        <div class="ui attached">
+                                                <div class="ui header m-white m-padded-tb-small"><h4>个人技术栈</h4></div>
+                                        </div>
+                                        <div class="ui attached ">
+                                                <div class="ui red wow animate__animated animate__fadeInRight left  label m-margin-tb-mini">java</div>
+                                                <div class="ui red wow animate__animated animate__fadeInRight left  label m-margin-tb-mini">SpringBoot</div>
+                                                <div class="ui red wow animate__animated animate__fadeInRight left  label m-margin-tb-mini">Spring</div>
+                                                <div class="ui red wow animate__animated animate__fadeInRight left  label m-margin-tb-mini">SpringMVC</div>
+                                                <div class="ui red wow animate__animated animate__fadeInRight left  label m-margin-tb-mini">Mybatis</div>
+                                                <div class="ui red wow animate__animated animate__fadeInRight left  label m-margin-tb-mini">微信小程序</div>
+                                                <div class="ui red wow animate__animated animate__fadeInRight left  label m-margin-tb-mini">uni-app</div>
+                                                <div class="ui red wow animate__animated animate__fadeInRight left  label m-margin-tb-mini">Golang</div>
+                                                <div class="ui red wow animate__animated animate__fadeInRight left  label m-margin-tb-mini">vue</div>
+                                                <div class="ui red wow animate__animated animate__fadeInRight left  label m-margin-tb-mini">mysql</div>
+                                                <div class="ui red wow animate__animated animate__fadeInRight left  label m-margin-tb-mini">...</div>
+                                        </div>
+                                        <div class="ui attached">
+                                                <div class="ui header m-white m-padded-tb-small"><h4>联系我</h4></div>
+                                        </div>
+                                        <div class="ui bottom attached ">
+                                                <a href="https://github.com/zhongyuanpang" data-content="点击跳转github" class="ui  circular icon button"><i class="github icon"></i></a>
+                                                <a href="#" class="ui wechat circular icon button"><i class="weixin icon"></i></a>
+                                                <a href="#" class="ui qq circular icon button " data-content="3212990982"><i class="qq icon"></i></a>
+                                        </div>
+
+                                        <!-- 点击关于我的弹出层 -->
+                                        <div class="ui wechat-QR flowing popup transition hidden">
+                                                <img src="../static/images/wechat.jpg" th:src="@{/images/wechat.jpg}" class="ui rounded image" style="width: 120px;" alt="博主微信">
+                                        </div>
+
+                                </div>
+                        </div>
+                </div>
+        </div>
+
+        <br>
+        <br>
+        <br>
+        <br>
+        <!-- 底部 -->
+        <footer th:replace="_fragments :: footer" class="ui inverted vertical stackable segment m-padded-tb-massive">
+                <div class="ui  center aligned container">
+                <!-- 
+                    1、inverted：用来反转颜色
+                    2、divided：分割线
+                    3、grid：与bootstarp的row类似，共分为16块
+                    4、three wide column：每列站3块撑满
+                    5、ui medium rounded  image：给图片加圆角
+                 -->
+                        <div class="ui inverted divided stackable grid">
+                                <div class="three wide column">
+                                        <div class="ui inverted link list">
+                                                <div class="item">
+                                                        <img src="../static/images/wechat.jpg" class="ui  rounded  image" alt=""
+                                                                style="width: 110px;">
+                                                </div>
+                                        </div>
+                                </div>
+                                <div class="four wide column">
+                                        <h4 class=" ui inverted header m-text">最新博客</h4>
+                                        <div class="ui inverted link list">
+                                                <a href="#" class="item">xxxx</a>
+                                                <a href="#" class="item">xxxx</a>
+                                                <a href="#" class="item">xxxx</a>
+                                        </div>
+                                </div>
+                                <div class="four wide column">
+                                        <h4 class=" ui inverted header m-text">联系我</h4>
+                                        <div class="ui inverted link list">
+                                                <a href="#" class="item">xxxx</a>
+                                                <a href="#" class="item">xxxx</a>
+                                                <a href="#" class="item">xxxx</a>
+                                        </div>
+                                </div>
+                                <div class="five wide column">
+                                        <h4 class=" ui inverted header m-text">Blog</h4>
+                                        <p class="m-text">xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</p>
+                                </div>
+                        </div>
+
+                        <!-- 分割线 -->
+                        <div class="ui inverted section divider"></div>
+                        <!-- 底部备案信息 -->
+                        <p class="m-text ">xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</p>
+
+                </div>
+        </footer>
+
+        <!--/*/<th:block th:replace="_fragments :: script">/*/-->
+        <script src="https://cdn.jsdelivr.net/npm/jquery@3.2/dist/jquery.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+        <!--/*/</th:block>/*/-->
+
+        <script>
+                $(function(){
+                        $('.menu.toggle').click(function(){
+                                $('.m-item').toggleClass("m-mobile-hide");
+                        })
+                          // 点击赞赏弹出的事件
+                          $('.qq').popup({
+                                position   : 'bottom center'
+                        })
+                        $('.wechat').popup({
+                                popup:$('.wechat-QR'),
+                                position   : 'bottom center'
+                        })
+                })
+        </script>
+
+</body>
+
+</html>

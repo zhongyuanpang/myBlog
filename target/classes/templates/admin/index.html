@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+
+<head th:replace="admin/_fragments :: head(~{::title})">
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- 引入css -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.css">
+        <link rel="stylesheet" type="text/css" href="../../static/css/me.css" />
+        <title>博客管理</title>
+</head>
+
+<body>
+
+        <!-- 导航 -->
+        <nav th:replace="admin/_fragments :: menu(0)" class="ui inverted attached segment m-padded-tb-mini">
+                <!-- 头部container容器 -->
+                <div class="ui contaniner">
+                        <!-- 
+                                1、stackable：响应式导航可自动收缩
+                         -->
+                        <div class="ui inverted secondary stackable menu">
+                                <!-- 
+                                        teal ：颜色
+                                -->
+                                <h2 class="ui teal header item">后台管理</h2>
+                                <a href="#" class="m-item item m-mobile-hide"> <i class="home icon"></i>首页</a>
+                                <a href="#" class="m-item item m-mobile-hide"> <i class="idea icon"></i>分类</a>
+                                <a href="#" class="m-item item m-mobile-hide"> <i class="tags icon"></i> 标签</a>
+                                <div class="right m-item m-mobile-hide menu">
+                                        <div class="ui dropdown  item">
+                                                <div class="text">
+                                                        <img class="ui avatar image" src="../../static/images/programmer.jpg" >
+                                                        nice
+                                                      </div>
+                                                      <i class="dropdown icon"></i>
+                                                      <div class="menu">
+                                                                <div class="item" data-value="out">退出登录</div>
+                                                                <div class="item" data-value="female">Female</div>
+                                                      </div>
+                                                </div>
+                                        </div>
+                                </div>
+                        </div>
+                <a href="#" class="ui button black icon menu toggle m-right-top m-mobile-show">
+                        <i class="sidebar icon"></i>
+                </a>
+        </nav>
+
+
+<!--         中间内容 -->
+        <div class="m-padded-tb-big  m-container-tiny">
+                <div class="ui  container">
+                        <div class="ui success large message">
+                                <p align="center">欢迎登录后台管理</p>
+                        </div>
+
+                        <img src="" th:src="@{http://p7.qhimg.com/bdm/1024_768_85/t013bded924a0683af3.jpg}" alt="" class="ui rounded bordered fluid image m-radius-20">
+                </div>
+        </div>
+
+        <br>
+        <br>
+        <br>
+        <br>
+
+        <!--/*/<th:block th:replace="admin/_fragments :: script">/*/-->
+        <script src="https://cdn.jsdelivr.net/npm/jquery@3.2/dist/jquery.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+        <!--/*/</th:block>/*/-->
+        <script>
+                $(function(){
+                        $('.menu.toggle').click(function(){
+                                $('.m-item').toggleClass("m-mobile-hide");
+                        })
+
+                        // 点击赞赏弹出的事件
+                        $('#payButton').popup({
+                                popup:$('.payQR.popup'),
+                                on : 'click',
+                                position   : 'bottom center'
+                        })
+
+                        // dorpdown
+                        $('.ui.dropdown').dropdown({
+                                on:'hover'
+                        });
+                })
+        </script>
+</body>
+
+</html>

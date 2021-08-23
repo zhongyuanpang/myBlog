@@ -1,0 +1,11 @@
+spring:
+  thymeleaf:    #thymeleaf模板
+    mode: HTML
+  profiles:
+    active: dev  #配置使用生产环境
+  jpa:
+    hibernate:
+      use-new-id-generator-mappings: false
+    open-in-view: false
+
+

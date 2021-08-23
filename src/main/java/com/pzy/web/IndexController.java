@@ -41,10 +41,10 @@ public class IndexController {
  * 主页的显示内容，文章、分类，标签、推荐
  */
     @GetMapping("/")
-    public String index(@PageableDefault(size = 7,sort = {"updateTime"},direction = Sort.Direction.DESC) Pageable pageable, Model model){
+    public String index(@PageableDefault(size = 10,sort = {"updateTime"},direction = Sort.Direction.DESC) Pageable pageable, Model model){
         model.addAttribute("page",blogService.listBlog(pageable));  //分页数据
         model.addAttribute("types",typeService.listTypeTop(7));
-        model.addAttribute("tags",tagService.listTagTop(7));
+        model.addAttribute("tags",tagService.listTagTop(10));
         model.addAttribute("recommendBlogs",blogService.listRecommendBlogTop(7));
         model.addAttribute("blogCount",blogService.countBlog());
         model.addAttribute("commentCount",commentService.countComment());
@@ -107,7 +107,7 @@ public class IndexController {
  * 搜索内容
  */
     @PostMapping("/search")
-    public String search(@PageableDefault(size = 7,sort = {"updateTime"}
+    public String search(@PageableDefault(size = 10,sort = {"updateTime"}
                             ,direction = Sort.Direction.DESC) Pageable pageable
                             , Model model
                             ,@RequestParam String query){
@@ -127,7 +127,7 @@ public class IndexController {
     //footer下面3条最新推荐
     @GetMapping("/footer/newblog")
     public String newblogs(Model model) {
-        List<Blog> blogs = blogService.listRecommendBlogTop(3);
+        List<Blog> blogs = blogService.listRecommendBlogTop(4);
         model.addAttribute("newblogs", blogs);
         return "_fragments :: newblogList";
     }
