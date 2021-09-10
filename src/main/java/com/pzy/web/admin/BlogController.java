@@ -1,11 +1,14 @@
 package com.pzy.web.admin;
 
+import cn.hutool.http.HttpUtil;
+import cn.hutool.json.JSONUtil;
 import com.alibaba.fastjson.JSONObject;
 import com.pzy.pojo.Blog;
 import com.pzy.pojo.User;
 import com.pzy.service.BlogService;
 import com.pzy.service.TagService;
 import com.pzy.service.TypeService;
+import com.pzy.util.UploadGiteeImgBed;
 import com.pzy.vo.BlogQuery;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
@@ -25,6 +28,7 @@ import java.io.File;
 import java.io.IOException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
+import java.util.Map;
 import java.util.UUID;
 
 @Controller
@@ -145,43 +149,31 @@ public class BlogController {
  * @return : com.pzy.util.Result
  * 文章上传图片
  */
+
     @RequestMapping(value = "/uploadImg",method = RequestMethod.POST)
     @CrossOrigin(origins = {"*","null"})
     @ResponseBody
     public JSONObject uploadImg(@RequestParam(value = "editormd-image-file") MultipartFile file, HttpServletRequest request, HttpServletResponse response) throws Exception{
-
         SimpleDateFormat sd = new SimpleDateFormat("yyyy/MM/dd");
+        String originalFilname = file.getOriginalFilename();
 
-        if (file.isEmpty()){
+        if(originalFilname == null){
             System.out.println("文件为空");
         }
-        String fileName = file.getOriginalFilename();   //文件名
-        String suffxName = fileName.substring(fileName.lastIndexOf("."));   //后缀名
+        String targetURL = UploadGiteeImgBed.createUploadFileUrl(originalFilname);
 
-        //添加日期目录
-        String format = sd.format(new Date());
+        //请求体封装
+        Map<String, Object> uploadBodyMap = UploadGiteeImgBed.getUploadBodyMap(file.getBytes());
+        //借助HttpUtil工具类发送POST请求
+        String JSONResult = HttpUtil.post(targetURL, uploadBodyMap);
+        //解析响应JSON字符串
+        cn.hutool.json.JSONObject jsonObj = JSONUtil.parseObj(JSONResult);
 
-        if(!suffxName.equals(".jpg") && !suffxName.equals(".png")){
-            JSONObject res = new JSONObject();
-            res.put("error","请选择正确图片");
-            return res;
-        }
-        String filePath = "D:/桌面/upload/blog/" + format + "/";   //上传后的路径
-        fileName = UUID.randomUUID() + suffxName ;  //新文件名
-        File dest = new File(filePath + fileName);
-        if(!dest.getParentFile().exists()){
-            dest.getParentFile().mkdirs();
-        }
-        try{
-            file.transferTo(dest);
-        }catch (IOException e){
-            e.printStackTrace();
-        }
+        cn.hutool.json.JSONObject content = JSONUtil.parseObj(jsonObj.getObj("content"));
+
+        String url = (String) content.getObj("download_url");
         JSONObject res = new JSONObject();
-        System.out.println(filePath+fileName);
-        String url = editUploadPath +fileName;
-        System.out.println(url);
-        res.put("url", url);
+        res.put("url", " "+ url + "");
         res.put("success", 1);
         res.put("message", "upload success!");
         return res;

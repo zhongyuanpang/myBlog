@@ -12,12 +12,14 @@ com\pzy\util\RandomAvatarUtils.class
 com\pzy\util\MyBeanUtils.class
 com\pzy\pojo\Tag.class
 com\pzy\web\admin\TypesController.class
+com\pzy\util\UploadGiteeImgBed.class
 com\pzy\service\impl\UserServiceImpl.class
 com\pzy\web\IndexController.class
 com\pzy\web\TypeShowController.class
 com\pzy\util\MarkDownUtils.class
 com\pzy\service\impl\BlogServiceImpl.class
 com\pzy\service\UserService.class
+com\pzy\util\DateUtils.class
 com\pzy\dao\TagRepository.class
 com\pzy\web\AboutShowController.class
 com\pzy\service\impl\TypeServiceImpl.class
@@ -36,6 +38,7 @@ com\pzy\dao\TypeRepository.class
 com\pzy\service\impl\CommentServiceImpl.class
 com\pzy\service\CommentService.class
 com\pzy\service\impl\BlogServiceImpl$1.class
+com\pzy\util\FileUtils.class
 com\pzy\pojo\Blog.class
 com\pzy\web\CommentController.class
 com\pzy\vo\UserQuery.class

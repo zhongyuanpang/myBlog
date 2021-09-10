@@ -1,435 +1,468 @@
-2021-08-20 14:59:28.837  INFO 28392 --- [restartedMain] com.pzy.BlogApplication                  : Starting BlogApplication using Java 11.0.8 on YZP with PID 28392 (F:\WorkDocument\后端\java主流框架\blog\target\classes started by 86177 in F:\WorkDocument\后端\java主流框架\blog)
-2021-08-20 14:59:28.845 DEBUG 28392 --- [restartedMain] com.pzy.BlogApplication                  : Running with Spring Boot v2.4.5, Spring v5.3.6
-2021-08-20 14:59:28.845  INFO 28392 --- [restartedMain] com.pzy.BlogApplication                  : The following profiles are active: dev
-2021-08-20 14:59:28.899  INFO 28392 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
-2021-08-20 14:59:28.900  INFO 28392 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
-2021-08-20 14:59:29.645  INFO 28392 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2021-08-20 14:59:29.729  INFO 28392 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 75 ms. Found 5 JPA repository interfaces.
-2021-08-20 14:59:29.858  WARN 28392 --- [restartedMain] o.m.s.mapper.ClassPathMapperScanner      : No MyBatis mapper was found in '[com.pzy]' package. Please check your configuration.
-2021-08-20 14:59:30.476  INFO 28392 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
-2021-08-20 14:59:30.485  INFO 28392 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2021-08-20 14:59:30.486  INFO 28392 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.45]
-2021-08-20 14:59:30.602  INFO 28392 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2021-08-20 14:59:30.603  INFO 28392 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1702 ms
-2021-08-20 14:59:30.814  INFO 28392 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2021-08-20 14:59:30.858  INFO 28392 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.30.Final
-2021-08-20 14:59:30.964  INFO 28392 --- [restartedMain] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
-2021-08-20 14:59:31.073  INFO 28392 --- [restartedMain] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
-2021-08-20 14:59:31.576  INFO 28392 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
-2021-08-20 14:59:32.899  INFO 28392 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-2021-08-20 14:59:32.910  INFO 28392 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2021-08-20 14:59:32.976  WARN 28392 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : Unable to start LiveReload server
-2021-08-20 14:59:33.888  INFO 28392 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
-2021-08-20 14:59:33.987  INFO 28392 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
-2021-08-20 14:59:34.440  INFO 28392 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
-2021-08-20 14:59:34.448  INFO 28392 --- [restartedMain] com.pzy.BlogApplication                  : Started BlogApplication in 6.109 seconds (JVM running for 7.652)
-2021-08-20 14:59:42.041  INFO 28392 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2021-08-20 14:59:42.042  INFO 28392 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2021-08-20 14:59:42.043  INFO 28392 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
-2021-08-20 14:59:42.072  INFO 28392 --- [http-nio-8080-exec-1] com.pzy.aspect.LogAspect                 : RequestLog : RequestLog{url='http://localhost:8080/', ip='0:0:0:0:0:0:0:1', classMethod='com.pzy.web.IndexController.index', args=[Page request [number: 0, size 10, sort: updateTime: DESC], {}]}
-2021-08-20 14:59:42.783  WARN 28392 --- [http-nio-8080-exec-1] org.hibernate.orm.deprecation            : HHH90000016: Found use of deprecated 'collection property' syntax in HQL/JPQL query [t.blogs.size]; use collection function syntax instead [size(t.blogs)].
-2021-08-20 14:59:42.931  WARN 28392 --- [http-nio-8080-exec-1] org.hibernate.orm.deprecation            : HHH90000016: Found use of deprecated 'collection property' syntax in HQL/JPQL query [t.blogs.size]; use collection function syntax instead [size(t.blogs)].
-2021-08-20 14:59:44.472  INFO 28392 --- [http-nio-8080-exec-1] com.pzy.aspect.LogAspect                 : Result : index
-2021-08-20 14:59:46.112  INFO 28392 --- [http-nio-8080-exec-3] com.pzy.aspect.LogAspect                 : RequestLog : RequestLog{url='http://localhost:8080/indexGetuserInfo', ip='0:0:0:0:0:0:0:1', classMethod='com.pzy.web.IndexController.indexGetUserInfo', args=[]}
-2021-08-20 14:59:46.308  INFO 28392 --- [http-nio-8080-exec-2] com.pzy.aspect.LogAspect                 : RequestLog : RequestLog{url='http://localhost:8080/', ip='0:0:0:0:0:0:0:1', classMethod='com.pzy.web.IndexController.index', args=[Page request [number: 0, size 10, sort: updateTime: DESC], {}]}
-2021-08-20 14:59:47.256  INFO 28392 --- [http-nio-8080-exec-3] com.pzy.aspect.LogAspect                 : Result : {"comment":{"commentCount":3},"blog":{"blogCount":12},"type":{"typeCount":16},"user":{"avatar":"https://s3.bmp.ovh/imgs/2021/08/06438835f7c58b4f.jpg","createTime":1623156849000,"email":"pangzy1013@gmail.com","id":1,"nickname":"nice","updateTime":1623156849000,"username":"nice"}}
-2021-08-20 14:59:49.010  INFO 28392 --- [http-nio-8080-exec-4] com.pzy.aspect.LogAspect                 : RequestLog : RequestLog{url='http://localhost:8080/blog/43', ip='0:0:0:0:0:0:0:1', classMethod='com.pzy.web.IndexController.blog', args=[43, {}]}
-2021-08-20 14:59:49.253  INFO 28392 --- [http-nio-8080-exec-4] com.pzy.aspect.LogAspect                 : Result : blog
-2021-08-20 14:59:49.297  INFO 28392 --- [http-nio-8080-exec-2] com.pzy.aspect.LogAspect                 : Result : index
-2021-08-20 14:59:49.663  INFO 28392 --- [http-nio-8080-exec-9] com.pzy.aspect.LogAspect                 : RequestLog : RequestLog{url='http://localhost:8080/indexGetuserInfo', ip='0:0:0:0:0:0:0:1', classMethod='com.pzy.web.IndexController.indexGetUserInfo', args=[]}
-2021-08-20 14:59:49.747  INFO 28392 --- [http-nio-8080-exec-6] com.pzy.aspect.LogAspect                 : RequestLog : RequestLog{url='http://localhost:8080/comments/43', ip='0:0:0:0:0:0:0:1', classMethod='com.pzy.web.CommentController.comments', args=[43, {}]}
-2021-08-20 14:59:49.809  INFO 28392 --- [http-nio-8080-exec-6] com.pzy.aspect.LogAspect                 : Result : blog :: commentList
-2021-08-20 14:59:50.523  INFO 28392 --- [http-nio-8080-exec-9] com.pzy.aspect.LogAspect                 : Result : {"comment":{"commentCount":3},"blog":{"blogCount":12},"type":{"typeCount":16},"user":{"avatar":"https://s3.bmp.ovh/imgs/2021/08/06438835f7c58b4f.jpg","createTime":1623156849000,"email":"pangzy1013@gmail.com","id":1,"nickname":"nice","updateTime":1623156849000,"username":"nice"}}
-2021-08-20 15:03:25.235  INFO 28392 --- [http-nio-8080-exec-8] com.pzy.aspect.LogAspect                 : RequestLog : RequestLog{url='http://localhost:8080/blog/43', ip='0:0:0:0:0:0:0:1', classMethod='com.pzy.web.IndexController.blog', args=[43, {}]}
-2021-08-20 15:03:25.477  INFO 28392 --- [http-nio-8080-exec-8] com.pzy.aspect.LogAspect                 : Result : blog
-2021-08-20 15:03:25.827  INFO 28392 --- [http-nio-8080-exec-8] com.pzy.aspect.LogAspect                 : RequestLog : RequestLog{url='http://localhost:8080/indexGetuserInfo', ip='0:0:0:0:0:0:0:1', classMethod='com.pzy.web.IndexController.indexGetUserInfo', args=[]}
-2021-08-20 15:03:25.893  INFO 28392 --- [http-nio-8080-exec-10] com.pzy.aspect.LogAspect                 : RequestLog : RequestLog{url='http://localhost:8080/comments/43', ip='0:0:0:0:0:0:0:1', classMethod='com.pzy.web.CommentController.comments', args=[43, {}]}
-2021-08-20 15:03:25.982  INFO 28392 --- [http-nio-8080-exec-10] com.pzy.aspect.LogAspect                 : Result : blog :: commentList
-2021-08-20 15:03:26.721  INFO 28392 --- [http-nio-8080-exec-8] com.pzy.aspect.LogAspect                 : Result : {"comment":{"commentCount":3},"blog":{"blogCount":12},"type":{"typeCount":16},"user":{"avatar":"https://s3.bmp.ovh/imgs/2021/08/06438835f7c58b4f.jpg","createTime":1623156849000,"email":"pangzy1013@gmail.com","id":1,"nickname":"nice","updateTime":1623156849000,"username":"nice"}}
-2021-08-20 15:04:03.132  INFO 28392 --- [http-nio-8080-exec-6] com.pzy.aspect.LogAspect                 : RequestLog : RequestLog{url='http://localhost:8080/blog/43', ip='0:0:0:0:0:0:0:1', classMethod='com.pzy.web.IndexController.blog', args=[43, {}]}
-2021-08-20 15:04:03.323  INFO 28392 --- [http-nio-8080-exec-6] com.pzy.aspect.LogAspect                 : Result : blog
-2021-08-20 15:04:03.672  INFO 28392 --- [http-nio-8080-exec-4] com.pzy.aspect.LogAspect                 : RequestLog : RequestLog{url='http://localhost:8080/indexGetuserInfo', ip='0:0:0:0:0:0:0:1', classMethod='com.pzy.web.IndexController.indexGetUserInfo', args=[]}
-2021-08-20 15:04:03.753  INFO 28392 --- [http-nio-8080-exec-8] com.pzy.aspect.LogAspect                 : RequestLog : RequestLog{url='http://localhost:8080/comments/43', ip='0:0:0:0:0:0:0:1', classMethod='com.pzy.web.CommentController.comments', args=[43, {}]}
-2021-08-20 15:04:03.814  INFO 28392 --- [http-nio-8080-exec-8] com.pzy.aspect.LogAspect                 : Result : blog :: commentList
-2021-08-20 15:04:04.546  INFO 28392 --- [http-nio-8080-exec-4] com.pzy.aspect.LogAspect                 : Result : {"comment":{"commentCount":3},"blog":{"blogCount":12},"type":{"typeCount":16},"user":{"avatar":"https://s3.bmp.ovh/imgs/2021/08/06438835f7c58b4f.jpg","createTime":1623156849000,"email":"pangzy1013@gmail.com","id":1,"nickname":"nice","updateTime":1623156849000,"username":"nice"}}
-2021-08-20 15:05:24.819  INFO 28392 --- [http-nio-8080-exec-6] com.pzy.aspect.LogAspect                 : RequestLog : RequestLog{url='http://localhost:8080/blog/43', ip='0:0:0:0:0:0:0:1', classMethod='com.pzy.web.IndexController.blog', args=[43, {}]}
-2021-08-20 15:05:25.053  INFO 28392 --- [http-nio-8080-exec-6] com.pzy.aspect.LogAspect                 : Result : blog
-2021-08-20 15:05:25.404  INFO 28392 --- [http-nio-8080-exec-7] com.pzy.aspect.LogAspect                 : RequestLog : RequestLog{url='http://localhost:8080/indexGetuserInfo', ip='0:0:0:0:0:0:0:1', classMethod='com.pzy.web.IndexController.indexGetUserInfo', args=[]}
-2021-08-20 15:05:25.487  INFO 28392 --- [http-nio-8080-exec-1] com.pzy.aspect.LogAspect                 : RequestLog : RequestLog{url='http://localhost:8080/comments/43', ip='0:0:0:0:0:0:0:1', classMethod='com.pzy.web.CommentController.comments', args=[43, {}]}
-2021-08-20 15:05:25.593  INFO 28392 --- [http-nio-8080-exec-1] com.pzy.aspect.LogAspect                 : Result : blog :: commentList
-2021-08-20 15:05:26.344  INFO 28392 --- [http-nio-8080-exec-7] com.pzy.aspect.LogAspect                 : Result : {"comment":{"commentCount":3},"blog":{"blogCount":12},"type":{"typeCount":16},"user":{"avatar":"https://s3.bmp.ovh/imgs/2021/08/06438835f7c58b4f.jpg","createTime":1623156849000,"email":"pangzy1013@gmail.com","id":1,"nickname":"nice","updateTime":1623156849000,"username":"nice"}}
-2021-08-20 15:05:52.646  INFO 28392 --- [http-nio-8080-exec-10] com.pzy.aspect.LogAspect                 : RequestLog : RequestLog{url='http://localhost:8080/blog/43', ip='0:0:0:0:0:0:0:1', classMethod='com.pzy.web.IndexController.blog', args=[43, {}]}
-2021-08-20 15:05:52.831  INFO 28392 --- [http-nio-8080-exec-10] com.pzy.aspect.LogAspect                 : Result : blog
-2021-08-20 15:05:53.184  INFO 28392 --- [http-nio-8080-exec-6] com.pzy.aspect.LogAspect                 : RequestLog : RequestLog{url='http://localhost:8080/indexGetuserInfo', ip='0:0:0:0:0:0:0:1', classMethod='com.pzy.web.IndexController.indexGetUserInfo', args=[]}
-2021-08-20 15:05:53.257  INFO 28392 --- [http-nio-8080-exec-3] com.pzy.aspect.LogAspect                 : RequestLog : RequestLog{url='http://localhost:8080/comments/43', ip='0:0:0:0:0:0:0:1', classMethod='com.pzy.web.CommentController.comments', args=[43, {}]}
-2021-08-20 15:05:53.303  INFO 28392 --- [http-nio-8080-exec-3] com.pzy.aspect.LogAspect                 : Result : blog :: commentList
-2021-08-20 15:05:54.057  INFO 28392 --- [http-nio-8080-exec-6] com.pzy.aspect.LogAspect                 : Result : {"comment":{"commentCount":3},"blog":{"blogCount":12},"type":{"typeCount":16},"user":{"avatar":"https://s3.bmp.ovh/imgs/2021/08/06438835f7c58b4f.jpg","createTime":1623156849000,"email":"pangzy1013@gmail.com","id":1,"nickname":"nice","updateTime":1623156849000,"username":"nice"}}
-2021-08-20 15:11:23.410  INFO 28392 --- [Thread-1] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
-2021-08-20 15:11:23.413  INFO 28392 --- [Thread-1] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2021-08-20 15:11:23.416  INFO 28392 --- [Thread-1] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closing ...
-2021-08-20 15:11:23.422  INFO 28392 --- [Thread-1] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closed
-2021-08-20 15:11:23.519  INFO 28392 --- [restartedMain] com.pzy.BlogApplication                  : Starting BlogApplication using Java 11.0.8 on YZP with PID 28392 (F:\WorkDocument\后端\java主流框架\blog\target\classes started by 86177 in F:\WorkDocument\后端\java主流框架\blog)
-2021-08-20 15:11:23.519 DEBUG 28392 --- [restartedMain] com.pzy.BlogApplication                  : Running with Spring Boot v2.4.5, Spring v5.3.6
-2021-08-20 15:11:23.519  INFO 28392 --- [restartedMain] com.pzy.BlogApplication                  : The following profiles are active: dev
-2021-08-20 15:11:23.677  INFO 28392 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2021-08-20 15:11:23.701  INFO 28392 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 24 ms. Found 5 JPA repository interfaces.
-2021-08-20 15:11:23.732  WARN 28392 --- [restartedMain] o.m.s.mapper.ClassPathMapperScanner      : No MyBatis mapper was found in '[com.pzy]' package. Please check your configuration.
-2021-08-20 15:11:23.848  INFO 28392 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
-2021-08-20 15:11:23.849  INFO 28392 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2021-08-20 15:11:23.849  INFO 28392 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.45]
-2021-08-20 15:11:23.912  INFO 28392 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2021-08-20 15:11:23.912  INFO 28392 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 391 ms
-2021-08-20 15:11:24.045  INFO 28392 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2021-08-20 15:11:24.052  INFO 28392 --- [restartedMain] com.alibaba.druid.pool.DruidDataSource   : {dataSource-2} inited
-2021-08-20 15:11:24.480  INFO 28392 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
-2021-08-20 15:11:25.316  INFO 28392 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-2021-08-20 15:11:25.317  INFO 28392 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2021-08-20 15:11:25.348  WARN 28392 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : Unable to start LiveReload server
-2021-08-20 15:11:25.836  INFO 28392 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
-2021-08-20 15:11:25.877  INFO 28392 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
-2021-08-20 15:11:26.031  INFO 28392 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
-2021-08-20 15:11:26.034  INFO 28392 --- [restartedMain] com.pzy.BlogApplication                  : Started BlogApplication in 2.548 seconds (JVM running for 719.239)
-2021-08-20 15:11:26.035  INFO 28392 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
-2021-08-20 15:11:31.004  INFO 28392 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2021-08-20 15:11:31.004  INFO 28392 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2021-08-20 15:11:31.005  INFO 28392 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
-2021-08-20 15:11:31.012  INFO 28392 --- [http-nio-8080-exec-1] com.pzy.aspect.LogAspect                 : RequestLog : RequestLog{url='http://localhost:8080/blog/43', ip='0:0:0:0:0:0:0:1', classMethod='com.pzy.web.IndexController.blog', args=[43, {}]}
-2021-08-20 15:11:31.247  INFO 28392 --- [http-nio-8080-exec-1] com.pzy.aspect.LogAspect                 : Result : blog
-2021-08-20 15:11:31.685  INFO 28392 --- [http-nio-8080-exec-1] com.pzy.aspect.LogAspect                 : RequestLog : RequestLog{url='http://localhost:8080/indexGetuserInfo', ip='0:0:0:0:0:0:0:1', classMethod='com.pzy.web.IndexController.indexGetUserInfo', args=[]}
-2021-08-20 15:11:31.739  INFO 28392 --- [http-nio-8080-exec-3] com.pzy.aspect.LogAspect                 : RequestLog : RequestLog{url='http://localhost:8080/comments/43', ip='0:0:0:0:0:0:0:1', classMethod='com.pzy.web.CommentController.comments', args=[43, {}]}
-2021-08-20 15:11:32.158  INFO 28392 --- [http-nio-8080-exec-3] com.pzy.aspect.LogAspect                 : Result : blog :: commentList
-2021-08-20 15:11:32.689  INFO 28392 --- [http-nio-8080-exec-1] com.pzy.aspect.LogAspect                 : Result : {"comment":{"commentCount":3},"blog":{"blogCount":12},"type":{"typeCount":16},"user":{"avatar":"https://s3.bmp.ovh/imgs/2021/08/06438835f7c58b4f.jpg","createTime":1623156849000,"email":"pangzy1013@gmail.com","id":1,"nickname":"nice","updateTime":1623156849000,"username":"nice"}}
-2021-08-20 15:12:16.562  INFO 28392 --- [http-nio-8080-exec-10] com.pzy.aspect.LogAspect                 : RequestLog : RequestLog{url='http://localhost:8080/blog/43', ip='0:0:0:0:0:0:0:1', classMethod='com.pzy.web.IndexController.blog', args=[43, {}]}
-2021-08-20 15:12:16.776  INFO 28392 --- [http-nio-8080-exec-10] com.pzy.aspect.LogAspect                 : Result : blog
-2021-08-20 15:12:17.121  INFO 28392 --- [http-nio-8080-exec-10] com.pzy.aspect.LogAspect                 : RequestLog : RequestLog{url='http://localhost:8080/indexGetuserInfo', ip='0:0:0:0:0:0:0:1', classMethod='com.pzy.web.IndexController.indexGetUserInfo', args=[]}
-2021-08-20 15:12:17.173  INFO 28392 --- [http-nio-8080-exec-8] com.pzy.aspect.LogAspect                 : RequestLog : RequestLog{url='http://localhost:8080/comments/43', ip='0:0:0:0:0:0:0:1', classMethod='com.pzy.web.CommentController.comments', args=[43, {}]}
-2021-08-20 15:12:17.218  INFO 28392 --- [http-nio-8080-exec-8] com.pzy.aspect.LogAspect                 : Result : blog :: commentList
-2021-08-20 15:12:18.107  INFO 28392 --- [http-nio-8080-exec-10] com.pzy.aspect.LogAspect                 : Result : {"comment":{"commentCount":3},"blog":{"blogCount":12},"type":{"typeCount":16},"user":{"avatar":"https://s3.bmp.ovh/imgs/2021/08/06438835f7c58b4f.jpg","createTime":1623156849000,"email":"pangzy1013@gmail.com","id":1,"nickname":"nice","updateTime":1623156849000,"username":"nice"}}
-2021-08-20 15:24:01.527  INFO 756 --- [restartedMain] com.pzy.BlogApplication                  : Starting BlogApplication using Java 11.0.8 on YZP with PID 756 (F:\WorkDocument\后端\java主流框架\blog\target\classes started by 86177 in F:\WorkDocument\后端\java主流框架\blog)
-2021-08-20 15:24:01.529 DEBUG 756 --- [restartedMain] com.pzy.BlogApplication                  : Running with Spring Boot v2.4.5, Spring v5.3.6
-2021-08-20 15:24:01.530  INFO 756 --- [restartedMain] com.pzy.BlogApplication                  : The following profiles are active: dev
-2021-08-20 15:24:01.563  INFO 756 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
-2021-08-20 15:24:01.564  INFO 756 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
-2021-08-20 15:24:02.120  INFO 756 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2021-08-20 15:24:02.183  INFO 756 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 57 ms. Found 5 JPA repository interfaces.
-2021-08-20 15:24:02.287  WARN 756 --- [restartedMain] o.m.s.mapper.ClassPathMapperScanner      : No MyBatis mapper was found in '[com.pzy]' package. Please check your configuration.
-2021-08-20 15:24:02.767  INFO 756 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
-2021-08-20 15:24:02.774  INFO 756 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2021-08-20 15:24:02.774  INFO 756 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.45]
-2021-08-20 15:24:02.892  INFO 756 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2021-08-20 15:24:02.892  INFO 756 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1328 ms
-2021-08-20 15:24:03.080  INFO 756 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2021-08-20 15:24:03.108  INFO 756 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.30.Final
-2021-08-20 15:24:03.173  INFO 756 --- [restartedMain] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
-2021-08-20 15:24:03.252  INFO 756 --- [restartedMain] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
-2021-08-20 15:24:03.724  INFO 756 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
-2021-08-20 15:24:04.926  INFO 756 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-2021-08-20 15:24:04.932  INFO 756 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2021-08-20 15:24:04.981  WARN 756 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : Unable to start LiveReload server
-2021-08-20 15:24:05.811  INFO 756 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
-2021-08-20 15:24:05.907  INFO 756 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
-2021-08-20 15:24:06.332  INFO 756 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
-2021-08-20 15:24:06.340  INFO 756 --- [restartedMain] com.pzy.BlogApplication                  : Started BlogApplication in 5.383 seconds (JVM running for 7.958)
-2021-08-20 15:25:47.332  INFO 756 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2021-08-20 15:25:47.333  INFO 756 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2021-08-20 15:25:47.334  INFO 756 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
-2021-08-20 15:25:47.366  INFO 756 --- [http-nio-8080-exec-1] com.pzy.aspect.LogAspect                 : RequestLog : RequestLog{url='http://localhost:8080/', ip='0:0:0:0:0:0:0:1', classMethod='com.pzy.web.IndexController.index', args=[Page request [number: 0, size 10, sort: updateTime: DESC], {}]}
-2021-08-20 15:25:48.081  WARN 756 --- [http-nio-8080-exec-1] org.hibernate.orm.deprecation            : HHH90000016: Found use of deprecated 'collection property' syntax in HQL/JPQL query [t.blogs.size]; use collection function syntax instead [size(t.blogs)].
-2021-08-20 15:25:48.214  WARN 756 --- [http-nio-8080-exec-1] org.hibernate.orm.deprecation            : HHH90000016: Found use of deprecated 'collection property' syntax in HQL/JPQL query [t.blogs.size]; use collection function syntax instead [size(t.blogs)].
-2021-08-20 15:25:49.630  INFO 756 --- [http-nio-8080-exec-1] com.pzy.aspect.LogAspect                 : Result : index
-2021-08-20 15:25:50.952  INFO 756 --- [http-nio-8080-exec-8] com.pzy.aspect.LogAspect                 : RequestLog : RequestLog{url='http://localhost:8080/indexGetuserInfo', ip='0:0:0:0:0:0:0:1', classMethod='com.pzy.web.IndexController.indexGetUserInfo', args=[]}
-2021-08-20 15:25:51.002  INFO 756 --- [http-nio-8080-exec-4] com.pzy.aspect.LogAspect                 : RequestLog : RequestLog{url='http://localhost:8080/', ip='0:0:0:0:0:0:0:1', classMethod='com.pzy.web.IndexController.index', args=[Page request [number: 0, size 10, sort: updateTime: DESC], {}]}
-2021-08-20 15:25:51.859  INFO 756 --- [http-nio-8080-exec-8] com.pzy.aspect.LogAspect                 : Result : {"comment":{"commentCount":3},"blog":{"blogCount":12},"type":{"typeCount":16},"user":{"avatar":"https://s3.bmp.ovh/imgs/2021/08/06438835f7c58b4f.jpg","createTime":1623156849000,"email":"pangzy1013@gmail.com","id":1,"nickname":"nice","updateTime":1623156849000,"username":"nice"}}
-2021-08-20 15:25:53.638  INFO 756 --- [http-nio-8080-exec-4] com.pzy.aspect.LogAspect                 : Result : index
-2021-08-20 15:25:54.748  INFO 756 --- [http-nio-8080-exec-3] com.pzy.aspect.LogAspect                 : RequestLog : RequestLog{url='http://localhost:8080/', ip='0:0:0:0:0:0:0:1', classMethod='com.pzy.web.IndexController.index', args=[Page request [number: 0, size 10, sort: updateTime: DESC], {}]}
-2021-08-20 15:25:56.912  INFO 756 --- [http-nio-8080-exec-3] com.pzy.aspect.LogAspect                 : Result : index
-2021-08-20 15:25:57.480  INFO 756 --- [http-nio-8080-exec-1] com.pzy.aspect.LogAspect                 : RequestLog : RequestLog{url='http://localhost:8080/indexGetuserInfo', ip='0:0:0:0:0:0:0:1', classMethod='com.pzy.web.IndexController.indexGetUserInfo', args=[]}
-2021-08-20 15:25:57.540  INFO 756 --- [http-nio-8080-exec-5] com.pzy.aspect.LogAspect                 : RequestLog : RequestLog{url='http://localhost:8080/', ip='0:0:0:0:0:0:0:1', classMethod='com.pzy.web.IndexController.index', args=[Page request [number: 0, size 10, sort: updateTime: DESC], {}]}
-2021-08-20 15:25:58.395  INFO 756 --- [http-nio-8080-exec-1] com.pzy.aspect.LogAspect                 : Result : {"comment":{"commentCount":3},"blog":{"blogCount":12},"type":{"typeCount":16},"user":{"avatar":"https://s3.bmp.ovh/imgs/2021/08/06438835f7c58b4f.jpg","createTime":1623156849000,"email":"pangzy1013@gmail.com","id":1,"nickname":"nice","updateTime":1623156849000,"username":"nice"}}
-2021-08-20 15:25:59.501  INFO 756 --- [http-nio-8080-exec-5] com.pzy.aspect.LogAspect                 : Result : index
-2021-08-20 15:26:01.428  INFO 756 --- [http-nio-8080-exec-3] com.pzy.aspect.LogAspect                 : RequestLog : RequestLog{url='http://localhost:8080/blog/43', ip='0:0:0:0:0:0:0:1', classMethod='com.pzy.web.IndexController.blog', args=[43, {}]}
-2021-08-20 15:26:01.661  INFO 756 --- [http-nio-8080-exec-3] com.pzy.aspect.LogAspect                 : Result : blog
-2021-08-20 15:26:02.060  INFO 756 --- [http-nio-8080-exec-6] com.pzy.aspect.LogAspect                 : RequestLog : RequestLog{url='http://localhost:8080/indexGetuserInfo', ip='0:0:0:0:0:0:0:1', classMethod='com.pzy.web.IndexController.indexGetUserInfo', args=[]}
-2021-08-20 15:26:02.135  INFO 756 --- [http-nio-8080-exec-9] com.pzy.aspect.LogAspect                 : RequestLog : RequestLog{url='http://localhost:8080/comments/43', ip='0:0:0:0:0:0:0:1', classMethod='com.pzy.web.CommentController.comments', args=[43, {}]}
-2021-08-20 15:26:02.195  INFO 756 --- [http-nio-8080-exec-9] com.pzy.aspect.LogAspect                 : Result : blog :: commentList
-2021-08-20 15:26:02.960  INFO 756 --- [http-nio-8080-exec-6] com.pzy.aspect.LogAspect                 : Result : {"comment":{"commentCount":3},"blog":{"blogCount":12},"type":{"typeCount":16},"user":{"avatar":"https://s3.bmp.ovh/imgs/2021/08/06438835f7c58b4f.jpg","createTime":1623156849000,"email":"pangzy1013@gmail.com","id":1,"nickname":"nice","updateTime":1623156849000,"username":"nice"}}
-2021-08-20 15:28:39.643  INFO 756 --- [http-nio-8080-exec-10] com.pzy.aspect.LogAspect                 : RequestLog : RequestLog{url='http://localhost:8080/blog/43', ip='0:0:0:0:0:0:0:1', classMethod='com.pzy.web.IndexController.blog', args=[43, {}]}
-2021-08-20 15:28:39.868  INFO 756 --- [http-nio-8080-exec-10] com.pzy.aspect.LogAspect                 : Result : blog
-2021-08-20 15:28:40.229  INFO 756 --- [http-nio-8080-exec-7] com.pzy.aspect.LogAspect                 : RequestLog : RequestLog{url='http://localhost:8080/indexGetuserInfo', ip='0:0:0:0:0:0:0:1', classMethod='com.pzy.web.IndexController.indexGetUserInfo', args=[]}
-2021-08-20 15:28:40.298  INFO 756 --- [http-nio-8080-exec-5] com.pzy.aspect.LogAspect                 : RequestLog : RequestLog{url='http://localhost:8080/comments/43', ip='0:0:0:0:0:0:0:1', classMethod='com.pzy.web.CommentController.comments', args=[43, {}]}
-2021-08-20 15:28:40.382  INFO 756 --- [http-nio-8080-exec-5] com.pzy.aspect.LogAspect                 : Result : blog :: commentList
-2021-08-20 15:28:41.080  INFO 756 --- [http-nio-8080-exec-7] com.pzy.aspect.LogAspect                 : Result : {"comment":{"commentCount":3},"blog":{"blogCount":12},"type":{"typeCount":16},"user":{"avatar":"https://s3.bmp.ovh/imgs/2021/08/06438835f7c58b4f.jpg","createTime":1623156849000,"email":"pangzy1013@gmail.com","id":1,"nickname":"nice","updateTime":1623156849000,"username":"nice"}}
-2021-08-20 17:05:31.641  INFO 756 --- [http-nio-8080-exec-4] com.pzy.aspect.LogAspect                 : RequestLog : RequestLog{url='http://localhost:8080/blog/43', ip='0:0:0:0:0:0:0:1', classMethod='com.pzy.web.IndexController.blog', args=[43, {}]}
-2021-08-20 17:05:34.340  INFO 756 --- [http-nio-8080-exec-4] com.pzy.aspect.LogAspect                 : Result : blog
-2021-08-20 17:05:35.692  INFO 756 --- [http-nio-8080-exec-7] com.pzy.aspect.LogAspect                 : RequestLog : RequestLog{url='http://localhost:8080/indexGetuserInfo', ip='0:0:0:0:0:0:0:1', classMethod='com.pzy.web.IndexController.indexGetUserInfo', args=[]}
-2021-08-20 17:05:35.825  INFO 756 --- [http-nio-8080-exec-1] com.pzy.aspect.LogAspect                 : RequestLog : RequestLog{url='http://localhost:8080/comments/43', ip='0:0:0:0:0:0:0:1', classMethod='com.pzy.web.CommentController.comments', args=[43, {}]}
-2021-08-20 17:05:37.149  INFO 756 --- [http-nio-8080-exec-1] com.pzy.aspect.LogAspect                 : Result : blog :: commentList
-2021-08-20 17:05:37.525  INFO 756 --- [http-nio-8080-exec-7] com.pzy.aspect.LogAspect                 : Result : {"comment":{"commentCount":3},"blog":{"blogCount":12},"type":{"typeCount":16},"user":{"avatar":"https://s3.bmp.ovh/imgs/2021/08/06438835f7c58b4f.jpg","createTime":1623156849000,"email":"pangzy1013@gmail.com","id":1,"nickname":"nice","updateTime":1623156849000,"username":"nice"}}
-2021-08-20 17:06:28.005  INFO 756 --- [http-nio-8080-exec-3] com.pzy.aspect.LogAspect                 : RequestLog : RequestLog{url='http://localhost:8080/blog/43', ip='0:0:0:0:0:0:0:1', classMethod='com.pzy.web.IndexController.blog', args=[43, {}]}
-2021-08-20 17:06:29.259  INFO 756 --- [http-nio-8080-exec-3] com.pzy.aspect.LogAspect                 : Result : blog
-2021-08-20 17:06:30.507  INFO 756 --- [http-nio-8080-exec-10] com.pzy.aspect.LogAspect                 : RequestLog : RequestLog{url='http://localhost:8080/indexGetuserInfo', ip='0:0:0:0:0:0:0:1', classMethod='com.pzy.web.IndexController.indexGetUserInfo', args=[]}
-2021-08-20 17:06:30.648  INFO 756 --- [http-nio-8080-exec-1] com.pzy.aspect.LogAspect                 : RequestLog : RequestLog{url='http://localhost:8080/comments/43', ip='0:0:0:0:0:0:0:1', classMethod='com.pzy.web.CommentController.comments', args=[43, {}]}
-2021-08-20 17:06:30.742  INFO 756 --- [http-nio-8080-exec-1] com.pzy.aspect.LogAspect                 : Result : blog :: commentList
-2021-08-20 17:06:31.938  INFO 756 --- [http-nio-8080-exec-10] com.pzy.aspect.LogAspect                 : Result : {"comment":{"commentCount":3},"blog":{"blogCount":12},"type":{"typeCount":16},"user":{"avatar":"https://s3.bmp.ovh/imgs/2021/08/06438835f7c58b4f.jpg","createTime":1623156849000,"email":"pangzy1013@gmail.com","id":1,"nickname":"nice","updateTime":1623156849000,"username":"nice"}}
-2021-08-20 17:09:43.964  INFO 23500 --- [restartedMain] com.pzy.BlogApplication                  : Starting BlogApplication using Java 11.0.8 on YZP with PID 23500 (F:\WorkDocument\后端\java主流框架\blog\target\classes started by 86177 in F:\WorkDocument\后端\java主流框架\blog)
-2021-08-20 17:09:43.966 DEBUG 23500 --- [restartedMain] com.pzy.BlogApplication                  : Running with Spring Boot v2.4.5, Spring v5.3.6
-2021-08-20 17:09:43.966  INFO 23500 --- [restartedMain] com.pzy.BlogApplication                  : The following profiles are active: dev
-2021-08-20 17:09:44.003  INFO 23500 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
-2021-08-20 17:09:44.004  INFO 23500 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
-2021-08-20 17:09:44.722  INFO 23500 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2021-08-20 17:09:44.815  INFO 23500 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 85 ms. Found 5 JPA repository interfaces.
-2021-08-20 17:09:44.942  WARN 23500 --- [restartedMain] o.m.s.mapper.ClassPathMapperScanner      : No MyBatis mapper was found in '[com.pzy]' package. Please check your configuration.
-2021-08-20 17:09:45.602  INFO 23500 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
-2021-08-20 17:09:45.613  INFO 23500 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2021-08-20 17:09:45.613  INFO 23500 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.45]
-2021-08-20 17:09:45.824  INFO 23500 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2021-08-20 17:09:45.824  INFO 23500 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1819 ms
-2021-08-20 17:09:46.080  INFO 23500 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2021-08-20 17:09:46.143  INFO 23500 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.30.Final
-2021-08-20 17:09:46.210  INFO 23500 --- [restartedMain] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
-2021-08-20 17:09:46.295  INFO 23500 --- [restartedMain] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
-2021-08-20 17:09:48.373  INFO 23500 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
-2021-08-20 17:09:52.934  INFO 23500 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-2021-08-20 17:09:52.948  INFO 23500 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2021-08-20 17:09:53.053  WARN 23500 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : Unable to start LiveReload server
-2021-08-20 17:09:54.727  INFO 23500 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
-2021-08-20 17:09:54.940  INFO 23500 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
-2021-08-20 17:09:55.895  INFO 23500 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
-2021-08-20 17:09:55.908  INFO 23500 --- [restartedMain] com.pzy.BlogApplication                  : Started BlogApplication in 12.383 seconds (JVM running for 14.583)
-2021-08-20 17:10:05.882  INFO 23500 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2021-08-20 17:10:05.883  INFO 23500 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2021-08-20 17:10:05.884  INFO 23500 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
-2021-08-20 17:10:05.923  INFO 23500 --- [http-nio-8080-exec-1] com.pzy.aspect.LogAspect                 : RequestLog : RequestLog{url='http://localhost:8080/', ip='0:0:0:0:0:0:0:1', classMethod='com.pzy.web.IndexController.index', args=[Page request [number: 0, size 10, sort: updateTime: DESC], {}]}
-2021-08-20 17:10:08.716  WARN 23500 --- [http-nio-8080-exec-1] org.hibernate.orm.deprecation            : HHH90000016: Found use of deprecated 'collection property' syntax in HQL/JPQL query [t.blogs.size]; use collection function syntax instead [size(t.blogs)].
-2021-08-20 17:10:09.615  WARN 23500 --- [http-nio-8080-exec-1] org.hibernate.orm.deprecation            : HHH90000016: Found use of deprecated 'collection property' syntax in HQL/JPQL query [t.blogs.size]; use collection function syntax instead [size(t.blogs)].
-2021-08-20 17:10:19.814  INFO 23500 --- [http-nio-8080-exec-1] com.pzy.aspect.LogAspect                 : Result : index
-2021-08-20 17:10:21.665  INFO 23500 --- [http-nio-8080-exec-2] com.pzy.aspect.LogAspect                 : RequestLog : RequestLog{url='http://localhost:8080/indexGetuserInfo', ip='0:0:0:0:0:0:0:1', classMethod='com.pzy.web.IndexController.indexGetUserInfo', args=[]}
-2021-08-20 17:10:22.239  INFO 23500 --- [http-nio-8080-exec-3] com.pzy.aspect.LogAspect                 : RequestLog : RequestLog{url='http://localhost:8080/', ip='0:0:0:0:0:0:0:1', classMethod='com.pzy.web.IndexController.index', args=[Page request [number: 0, size 10, sort: updateTime: DESC], {}]}
-2021-08-20 17:10:22.973  INFO 23500 --- [http-nio-8080-exec-2] com.pzy.aspect.LogAspect                 : Result : {"comment":{"commentCount":3},"blog":{"blogCount":12},"type":{"typeCount":16},"user":{"avatar":"https://s3.bmp.ovh/imgs/2021/08/06438835f7c58b4f.jpg","createTime":1623156849000,"email":"pangzy1013@gmail.com","id":1,"nickname":"nice","updateTime":1623156849000,"username":"nice"}}
-2021-08-20 17:10:24.701  INFO 23500 --- [http-nio-8080-exec-3] com.pzy.aspect.LogAspect                 : Result : index
-2021-08-20 17:10:26.754  INFO 23500 --- [http-nio-8080-exec-1] com.pzy.aspect.LogAspect                 : RequestLog : RequestLog{url='http://localhost:8080/blog/43', ip='0:0:0:0:0:0:0:1', classMethod='com.pzy.web.IndexController.blog', args=[43, {}]}
-2021-08-20 17:10:27.770  INFO 23500 --- [http-nio-8080-exec-1] com.pzy.aspect.LogAspect                 : Result : blog
-2021-08-20 17:10:28.509  INFO 23500 --- [http-nio-8080-exec-1] com.pzy.aspect.LogAspect                 : RequestLog : RequestLog{url='http://localhost:8080/indexGetuserInfo', ip='0:0:0:0:0:0:0:1', classMethod='com.pzy.web.IndexController.indexGetUserInfo', args=[]}
-2021-08-20 17:10:28.622  INFO 23500 --- [http-nio-8080-exec-2] com.pzy.aspect.LogAspect                 : RequestLog : RequestLog{url='http://localhost:8080/comments/43', ip='0:0:0:0:0:0:0:1', classMethod='com.pzy.web.CommentController.comments', args=[43, {}]}
-2021-08-20 17:10:28.825  INFO 23500 --- [http-nio-8080-exec-2] com.pzy.aspect.LogAspect                 : Result : blog :: commentList
-2021-08-20 17:10:33.760  INFO 23500 --- [http-nio-8080-exec-1] com.pzy.aspect.LogAspect                 : Result : {"comment":{"commentCount":3},"blog":{"blogCount":12},"type":{"typeCount":16},"user":{"avatar":"https://s3.bmp.ovh/imgs/2021/08/06438835f7c58b4f.jpg","createTime":1623156849000,"email":"pangzy1013@gmail.com","id":1,"nickname":"nice","updateTime":1623156849000,"username":"nice"}}
-2021-08-20 17:20:26.065  INFO 12512 --- [restartedMain] com.pzy.BlogApplication                  : Starting BlogApplication using Java 11.0.8 on YZP with PID 12512 (F:\WorkDocument\后端\java主流框架\blog\target\classes started by 86177 in F:\WorkDocument\后端\java主流框架\blog)
-2021-08-20 17:20:26.069 DEBUG 12512 --- [restartedMain] com.pzy.BlogApplication                  : Running with Spring Boot v2.4.5, Spring v5.3.6
-2021-08-20 17:20:26.069  INFO 12512 --- [restartedMain] com.pzy.BlogApplication                  : The following profiles are active: dev
-2021-08-20 17:20:26.119  INFO 12512 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
-2021-08-20 17:20:26.119  INFO 12512 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
-2021-08-20 17:20:27.074  INFO 12512 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2021-08-20 17:20:27.169  INFO 12512 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 82 ms. Found 5 JPA repository interfaces.
-2021-08-20 17:20:27.316  WARN 12512 --- [restartedMain] o.m.s.mapper.ClassPathMapperScanner      : No MyBatis mapper was found in '[com.pzy]' package. Please check your configuration.
-2021-08-20 17:20:27.979  INFO 12512 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
-2021-08-20 17:20:27.986  INFO 12512 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2021-08-20 17:20:27.986  INFO 12512 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.45]
-2021-08-20 17:20:28.115  INFO 12512 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2021-08-20 17:20:28.116  INFO 12512 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1996 ms
-2021-08-20 17:20:28.330  INFO 12512 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2021-08-20 17:20:28.360  INFO 12512 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.30.Final
-2021-08-20 17:20:28.429  INFO 12512 --- [restartedMain] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
-2021-08-20 17:20:28.513  INFO 12512 --- [restartedMain] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
-2021-08-20 17:20:29.667  INFO 12512 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
-2021-08-20 17:20:32.306  INFO 12512 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-2021-08-20 17:20:32.323  INFO 12512 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2021-08-20 17:20:32.447  WARN 12512 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : Unable to start LiveReload server
-2021-08-20 17:20:33.854  INFO 12512 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
-2021-08-20 17:20:33.995  INFO 12512 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
-2021-08-20 17:20:34.800  INFO 12512 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
-2021-08-20 17:20:34.821  INFO 12512 --- [restartedMain] com.pzy.BlogApplication                  : Started BlogApplication in 9.259 seconds (JVM running for 10.954)
-2021-08-20 17:20:49.630  INFO 12512 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2021-08-20 17:20:49.631  INFO 12512 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2021-08-20 17:20:49.632  INFO 12512 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
-2021-08-20 17:20:49.673  INFO 12512 --- [http-nio-8080-exec-1] com.pzy.aspect.LogAspect                 : RequestLog : RequestLog{url='http://localhost:8080/', ip='0:0:0:0:0:0:0:1', classMethod='com.pzy.web.IndexController.index', args=[Page request [number: 0, size 10, sort: updateTime: DESC], {}]}
-2021-08-20 17:20:51.262  WARN 12512 --- [http-nio-8080-exec-1] org.hibernate.orm.deprecation            : HHH90000016: Found use of deprecated 'collection property' syntax in HQL/JPQL query [t.blogs.size]; use collection function syntax instead [size(t.blogs)].
-2021-08-20 17:20:51.561  WARN 12512 --- [http-nio-8080-exec-1] org.hibernate.orm.deprecation            : HHH90000016: Found use of deprecated 'collection property' syntax in HQL/JPQL query [t.blogs.size]; use collection function syntax instead [size(t.blogs)].
-2021-08-20 17:20:55.258  INFO 12512 --- [http-nio-8080-exec-1] com.pzy.aspect.LogAspect                 : Result : index
-2021-08-20 17:20:57.457  INFO 12512 --- [http-nio-8080-exec-4] com.pzy.aspect.LogAspect                 : RequestLog : RequestLog{url='http://localhost:8080/indexGetuserInfo', ip='0:0:0:0:0:0:0:1', classMethod='com.pzy.web.IndexController.indexGetUserInfo', args=[]}
-2021-08-20 17:20:57.560  INFO 12512 --- [http-nio-8080-exec-1] com.pzy.aspect.LogAspect                 : RequestLog : RequestLog{url='http://localhost:8080/', ip='0:0:0:0:0:0:0:1', classMethod='com.pzy.web.IndexController.index', args=[Page request [number: 0, size 10, sort: updateTime: DESC], {}]}
-2021-08-20 17:20:59.322  INFO 12512 --- [http-nio-8080-exec-4] com.pzy.aspect.LogAspect                 : Result : {"comment":{"commentCount":3},"blog":{"blogCount":12},"type":{"typeCount":16},"user":{"avatar":"https://s3.bmp.ovh/imgs/2021/08/06438835f7c58b4f.jpg","createTime":1623156849000,"email":"pangzy1013@gmail.com","id":1,"nickname":"nice","updateTime":1623156849000,"username":"nice"}}
-2021-08-20 17:21:01.533  INFO 12512 --- [http-nio-8080-exec-1] com.pzy.aspect.LogAspect                 : Result : index
-2021-08-20 17:21:02.262  INFO 12512 --- [http-nio-8080-exec-10] com.pzy.aspect.LogAspect                 : RequestLog : RequestLog{url='http://localhost:8080/blog/43', ip='0:0:0:0:0:0:0:1', classMethod='com.pzy.web.IndexController.blog', args=[43, {}]}
-2021-08-20 17:21:02.718  INFO 12512 --- [http-nio-8080-exec-10] com.pzy.aspect.LogAspect                 : Result : blog
-2021-08-20 17:21:03.351  INFO 12512 --- [http-nio-8080-exec-7] com.pzy.aspect.LogAspect                 : RequestLog : RequestLog{url='http://localhost:8080/indexGetuserInfo', ip='0:0:0:0:0:0:0:1', classMethod='com.pzy.web.IndexController.indexGetUserInfo', args=[]}
-2021-08-20 17:21:03.490  INFO 12512 --- [http-nio-8080-exec-3] com.pzy.aspect.LogAspect                 : RequestLog : RequestLog{url='http://localhost:8080/comments/43', ip='0:0:0:0:0:0:0:1', classMethod='com.pzy.web.CommentController.comments', args=[43, {}]}
-2021-08-20 17:21:03.640  INFO 12512 --- [http-nio-8080-exec-3] com.pzy.aspect.LogAspect                 : Result : blog :: commentList
-2021-08-20 17:21:05.482  INFO 12512 --- [http-nio-8080-exec-7] com.pzy.aspect.LogAspect                 : Result : {"comment":{"commentCount":3},"blog":{"blogCount":12},"type":{"typeCount":16},"user":{"avatar":"https://s3.bmp.ovh/imgs/2021/08/06438835f7c58b4f.jpg","createTime":1623156849000,"email":"pangzy1013@gmail.com","id":1,"nickname":"nice","updateTime":1623156849000,"username":"nice"}}
-2021-08-20 17:26:04.168  INFO 36392 --- [main] com.pzy.BlogApplicationTests             : Starting BlogApplicationTests using Java 11.0.8 on YZP with PID 36392 (started by 86177 in F:\WorkDocument\���\java�������\blog)
-2021-08-20 17:26:04.170 DEBUG 36392 --- [main] com.pzy.BlogApplicationTests             : Running with Spring Boot v2.4.5, Spring v5.3.6
-2021-08-20 17:26:04.171  INFO 36392 --- [main] com.pzy.BlogApplicationTests             : The following profiles are active: dev
-2021-08-20 17:26:05.261  INFO 36392 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2021-08-20 17:26:05.393  INFO 36392 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 121 ms. Found 5 JPA repository interfaces.
-2021-08-20 17:26:05.589  WARN 36392 --- [main] o.m.s.mapper.ClassPathMapperScanner      : No MyBatis mapper was found in '[com.pzy]' package. Please check your configuration.
-2021-08-20 17:26:06.645  INFO 36392 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2021-08-20 17:26:06.727  INFO 36392 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.30.Final
-2021-08-20 17:26:06.974  INFO 36392 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
-2021-08-20 17:26:07.581  INFO 36392 --- [main] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
-2021-08-20 17:26:08.714  INFO 36392 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
-2021-08-20 17:26:11.350  INFO 36392 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-2021-08-20 17:26:11.372  INFO 36392 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2021-08-20 17:26:13.977  INFO 36392 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
-2021-08-20 17:26:14.245  INFO 36392 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
-2021-08-20 17:26:15.069  INFO 36392 --- [main] com.pzy.BlogApplicationTests             : Started BlogApplicationTests in 11.352 seconds (JVM running for 12.651)
-2021-08-20 17:26:15.295  INFO 36392 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
-2021-08-20 17:26:15.299  INFO 36392 --- [SpringContextShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2021-08-20 17:26:15.302  INFO 36392 --- [SpringContextShutdownHook] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closing ...
-2021-08-20 17:26:15.317  INFO 36392 --- [SpringContextShutdownHook] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closed
-2021-08-20 17:47:31.275  INFO 36124 --- [restartedMain] com.pzy.BlogApplication                  : Starting BlogApplication using Java 11.0.8 on YZP with PID 36124 (F:\WorkDocument\后端\java主流框架\blog\target\classes started by 86177 in F:\WorkDocument\后端\java主流框架\blog)
-2021-08-20 17:47:31.277 DEBUG 36124 --- [restartedMain] com.pzy.BlogApplication                  : Running with Spring Boot v2.4.5, Spring v5.3.6
-2021-08-20 17:47:31.277  INFO 36124 --- [restartedMain] com.pzy.BlogApplication                  : The following profiles are active: dev
-2021-08-20 17:47:31.313  INFO 36124 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
-2021-08-20 17:47:31.313  INFO 36124 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
-2021-08-20 17:47:31.891  INFO 36124 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2021-08-20 17:47:31.964  INFO 36124 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 67 ms. Found 5 JPA repository interfaces.
-2021-08-20 17:47:32.087  WARN 36124 --- [restartedMain] o.m.s.mapper.ClassPathMapperScanner      : No MyBatis mapper was found in '[com.pzy]' package. Please check your configuration.
-2021-08-20 17:47:32.762  INFO 36124 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
-2021-08-20 17:47:32.782  INFO 36124 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2021-08-20 17:47:32.783  INFO 36124 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.45]
-2021-08-20 17:47:32.969  INFO 36124 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2021-08-20 17:47:32.969  INFO 36124 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1655 ms
-2021-08-20 17:47:33.156  INFO 36124 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2021-08-20 17:47:33.183  INFO 36124 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.30.Final
-2021-08-20 17:47:33.271  INFO 36124 --- [restartedMain] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
-2021-08-20 17:47:33.368  INFO 36124 --- [restartedMain] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
-2021-08-20 17:47:34.429  INFO 36124 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
-2021-08-20 17:47:37.172  INFO 36124 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-2021-08-20 17:47:37.188  INFO 36124 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2021-08-20 17:47:37.337  WARN 36124 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : Unable to start LiveReload server
-2021-08-20 17:47:39.112  INFO 36124 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
-2021-08-20 17:47:39.266  INFO 36124 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
-2021-08-20 17:47:39.994  INFO 36124 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
-2021-08-20 17:47:40.007  INFO 36124 --- [restartedMain] com.pzy.BlogApplication                  : Started BlogApplication in 9.1 seconds (JVM running for 10.615)
-2021-08-20 17:47:48.204  INFO 36124 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2021-08-20 17:47:48.205  INFO 36124 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2021-08-20 17:47:48.207  INFO 36124 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
-2021-08-20 17:47:48.242  INFO 36124 --- [http-nio-8080-exec-1] com.pzy.aspect.LogAspect                 : RequestLog : RequestLog{url='http://localhost:8080/', ip='0:0:0:0:0:0:0:1', classMethod='com.pzy.web.IndexController.index', args=[Page request [number: 0, size 10, sort: updateTime: DESC], {}]}
-2021-08-20 17:47:49.675  WARN 36124 --- [http-nio-8080-exec-1] org.hibernate.orm.deprecation            : HHH90000016: Found use of deprecated 'collection property' syntax in HQL/JPQL query [t.blogs.size]; use collection function syntax instead [size(t.blogs)].
-2021-08-20 17:47:49.972  WARN 36124 --- [http-nio-8080-exec-1] org.hibernate.orm.deprecation            : HHH90000016: Found use of deprecated 'collection property' syntax in HQL/JPQL query [t.blogs.size]; use collection function syntax instead [size(t.blogs)].
-2021-08-20 17:47:53.633  INFO 36124 --- [http-nio-8080-exec-1] com.pzy.aspect.LogAspect                 : Result : index
-2021-08-20 17:47:55.236  INFO 36124 --- [http-nio-8080-exec-3] com.pzy.aspect.LogAspect                 : RequestLog : RequestLog{url='http://localhost:8080/indexGetuserInfo', ip='0:0:0:0:0:0:0:1', classMethod='com.pzy.web.IndexController.indexGetUserInfo', args=[]}
-2021-08-20 17:47:55.350  INFO 36124 --- [http-nio-8080-exec-5] com.pzy.aspect.LogAspect                 : RequestLog : RequestLog{url='http://localhost:8080/', ip='0:0:0:0:0:0:0:1', classMethod='com.pzy.web.IndexController.index', args=[Page request [number: 0, size 10, sort: updateTime: DESC], {}]}
-2021-08-20 17:47:56.849  INFO 36124 --- [http-nio-8080-exec-3] com.pzy.aspect.LogAspect                 : Result : {"comment":{"commentCount":3},"blog":{"blogCount":12},"type":{"typeCount":16},"user":{"avatar":"https://s3.bmp.ovh/imgs/2021/08/06438835f7c58b4f.jpg","createTime":1623156849000,"email":"pangzy1013@gmail.com","id":1,"nickname":"nice","updateTime":1623156849000,"username":"nice"}}
-2021-08-20 17:47:58.550  INFO 36124 --- [http-nio-8080-exec-5] com.pzy.aspect.LogAspect                 : Result : index
-2021-08-20 17:50:37.743  INFO 36124 --- [http-nio-8080-exec-9] com.pzy.aspect.LogAspect                 : RequestLog : RequestLog{url='http://localhost:8080/blog/43', ip='0:0:0:0:0:0:0:1', classMethod='com.pzy.web.IndexController.blog', args=[43, {}]}
-2021-08-20 17:50:38.213  INFO 36124 --- [http-nio-8080-exec-9] com.pzy.aspect.LogAspect                 : Result : blog
-2021-08-20 17:50:38.882  INFO 36124 --- [http-nio-8080-exec-2] com.pzy.aspect.LogAspect                 : RequestLog : RequestLog{url='http://localhost:8080/indexGetuserInfo', ip='0:0:0:0:0:0:0:1', classMethod='com.pzy.web.IndexController.indexGetUserInfo', args=[]}
-2021-08-20 17:50:39.010  INFO 36124 --- [http-nio-8080-exec-7] com.pzy.aspect.LogAspect                 : RequestLog : RequestLog{url='http://localhost:8080/comments/43', ip='0:0:0:0:0:0:0:1', classMethod='com.pzy.web.CommentController.comments', args=[43, {}]}
-2021-08-20 17:50:39.237  INFO 36124 --- [http-nio-8080-exec-7] com.pzy.aspect.LogAspect                 : Result : blog :: commentList
-2021-08-20 17:50:41.181  INFO 36124 --- [http-nio-8080-exec-2] com.pzy.aspect.LogAspect                 : Result : {"comment":{"commentCount":3},"blog":{"blogCount":12},"type":{"typeCount":16},"user":{"avatar":"https://s3.bmp.ovh/imgs/2021/08/06438835f7c58b4f.jpg","createTime":1623156849000,"email":"pangzy1013@gmail.com","id":1,"nickname":"nice","updateTime":1623156849000,"username":"nice"}}
-2021-08-20 18:08:52.218  INFO 2456 --- [restartedMain] com.pzy.BlogApplication                  : Starting BlogApplication using Java 11.0.8 on YZP with PID 2456 (F:\WorkDocument\后端\java主流框架\blog\target\classes started by 86177 in F:\WorkDocument\后端\java主流框架\blog)
-2021-08-20 18:08:52.221 DEBUG 2456 --- [restartedMain] com.pzy.BlogApplication                  : Running with Spring Boot v2.4.5, Spring v5.3.6
-2021-08-20 18:08:52.221  INFO 2456 --- [restartedMain] com.pzy.BlogApplication                  : The following profiles are active: dev
-2021-08-20 18:08:52.265  INFO 2456 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
-2021-08-20 18:08:52.266  INFO 2456 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
-2021-08-20 18:08:53.136  INFO 2456 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2021-08-20 18:08:53.246  INFO 2456 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 99 ms. Found 5 JPA repository interfaces.
-2021-08-20 18:08:53.435  WARN 2456 --- [restartedMain] o.m.s.mapper.ClassPathMapperScanner      : No MyBatis mapper was found in '[com.pzy]' package. Please check your configuration.
-2021-08-20 18:08:54.244  INFO 2456 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
-2021-08-20 18:08:54.257  INFO 2456 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2021-08-20 18:08:54.258  INFO 2456 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.45]
-2021-08-20 18:08:54.409  INFO 2456 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2021-08-20 18:08:54.410  INFO 2456 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2142 ms
-2021-08-20 18:08:54.668  INFO 2456 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2021-08-20 18:08:54.720  INFO 2456 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.30.Final
-2021-08-20 18:08:54.803  INFO 2456 --- [restartedMain] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
-2021-08-20 18:08:54.927  INFO 2456 --- [restartedMain] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
-2021-08-20 18:08:55.946  INFO 2456 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
-2021-08-20 18:08:58.180  INFO 2456 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-2021-08-20 18:08:58.197  INFO 2456 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2021-08-20 18:08:58.338  WARN 2456 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : Unable to start LiveReload server
-2021-08-20 18:08:59.998  INFO 2456 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
-2021-08-20 18:09:00.160  INFO 2456 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
-2021-08-20 18:09:01.166  INFO 2456 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
-2021-08-20 18:09:01.184  INFO 2456 --- [restartedMain] com.pzy.BlogApplication                  : Started BlogApplication in 9.456 seconds (JVM running for 11.095)
-2021-08-20 18:09:20.974  INFO 2456 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2021-08-20 18:09:20.975  INFO 2456 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2021-08-20 18:09:20.976  INFO 2456 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
-2021-08-20 18:09:21.020  INFO 2456 --- [http-nio-8080-exec-1] com.pzy.aspect.LogAspect                 : RequestLog : RequestLog{url='http://localhost:8080/', ip='0:0:0:0:0:0:0:1', classMethod='com.pzy.web.IndexController.index', args=[Page request [number: 0, size 10, sort: updateTime: DESC], {}]}
-2021-08-20 18:09:22.572  WARN 2456 --- [http-nio-8080-exec-1] org.hibernate.orm.deprecation            : HHH90000016: Found use of deprecated 'collection property' syntax in HQL/JPQL query [t.blogs.size]; use collection function syntax instead [size(t.blogs)].
-2021-08-20 18:09:22.851  WARN 2456 --- [http-nio-8080-exec-1] org.hibernate.orm.deprecation            : HHH90000016: Found use of deprecated 'collection property' syntax in HQL/JPQL query [t.blogs.size]; use collection function syntax instead [size(t.blogs)].
-2021-08-20 18:09:26.150  INFO 2456 --- [http-nio-8080-exec-1] com.pzy.aspect.LogAspect                 : Result : index
-2021-08-20 18:09:28.092  INFO 2456 --- [http-nio-8080-exec-1] com.pzy.aspect.LogAspect                 : RequestLog : RequestLog{url='http://localhost:8080/indexGetuserInfo', ip='0:0:0:0:0:0:0:1', classMethod='com.pzy.web.IndexController.indexGetUserInfo', args=[]}
-2021-08-20 18:09:28.209  INFO 2456 --- [http-nio-8080-exec-6] com.pzy.aspect.LogAspect                 : RequestLog : RequestLog{url='http://localhost:8080/', ip='0:0:0:0:0:0:0:1', classMethod='com.pzy.web.IndexController.index', args=[Page request [number: 0, size 10, sort: updateTime: DESC], {}]}
-2021-08-20 18:09:30.030  INFO 2456 --- [http-nio-8080-exec-1] com.pzy.aspect.LogAspect                 : Result : {"comment":{"commentCount":3},"blog":{"blogCount":12},"type":{"typeCount":16},"user":{"avatar":"https://s3.bmp.ovh/imgs/2021/08/06438835f7c58b4f.jpg","createTime":1623156849000,"email":"pangzy1013@gmail.com","id":1,"nickname":"nice","updateTime":1623156849000,"username":"nice"}}
-2021-08-20 18:09:34.531  INFO 2456 --- [http-nio-8080-exec-6] com.pzy.aspect.LogAspect                 : Result : index
-2021-08-20 18:09:41.311  INFO 2456 --- [http-nio-8080-exec-8] com.pzy.aspect.LogAspect                 : RequestLog : RequestLog{url='http://localhost:8080/blog/43', ip='0:0:0:0:0:0:0:1', classMethod='com.pzy.web.IndexController.blog', args=[43, {}]}
-2021-08-20 18:09:42.006  INFO 2456 --- [http-nio-8080-exec-8] com.pzy.aspect.LogAspect                 : Result : blog
-2021-08-20 18:09:42.795  INFO 2456 --- [http-nio-8080-exec-2] com.pzy.aspect.LogAspect                 : RequestLog : RequestLog{url='http://localhost:8080/indexGetuserInfo', ip='0:0:0:0:0:0:0:1', classMethod='com.pzy.web.IndexController.indexGetUserInfo', args=[]}
-2021-08-20 18:09:42.950  INFO 2456 --- [http-nio-8080-exec-3] com.pzy.aspect.LogAspect                 : RequestLog : RequestLog{url='http://localhost:8080/comments/43', ip='0:0:0:0:0:0:0:1', classMethod='com.pzy.web.CommentController.comments', args=[43, {}]}
-2021-08-20 18:09:43.135  INFO 2456 --- [http-nio-8080-exec-3] com.pzy.aspect.LogAspect                 : Result : blog :: commentList
-2021-08-20 18:09:44.876  INFO 2456 --- [http-nio-8080-exec-2] com.pzy.aspect.LogAspect                 : Result : {"comment":{"commentCount":3},"blog":{"blogCount":12},"type":{"typeCount":16},"user":{"avatar":"https://s3.bmp.ovh/imgs/2021/08/06438835f7c58b4f.jpg","createTime":1623156849000,"email":"pangzy1013@gmail.com","id":1,"nickname":"nice","updateTime":1623156849000,"username":"nice"}}
-2021-08-20 18:14:56.785  INFO 2456 --- [http-nio-8080-exec-9] com.pzy.aspect.LogAspect                 : RequestLog : RequestLog{url='http://localhost:8080/blog/43', ip='0:0:0:0:0:0:0:1', classMethod='com.pzy.web.IndexController.blog', args=[43, {}]}
-2021-08-20 18:14:57.189  INFO 2456 --- [http-nio-8080-exec-9] com.pzy.aspect.LogAspect                 : Result : blog
-2021-08-20 18:14:57.817  INFO 2456 --- [http-nio-8080-exec-7] com.pzy.aspect.LogAspect                 : RequestLog : RequestLog{url='http://localhost:8080/indexGetuserInfo', ip='0:0:0:0:0:0:0:1', classMethod='com.pzy.web.IndexController.indexGetUserInfo', args=[]}
-2021-08-20 18:14:57.945  INFO 2456 --- [http-nio-8080-exec-3] com.pzy.aspect.LogAspect                 : RequestLog : RequestLog{url='http://localhost:8080/comments/43', ip='0:0:0:0:0:0:0:1', classMethod='com.pzy.web.CommentController.comments', args=[43, {}]}
-2021-08-20 18:14:58.115  INFO 2456 --- [http-nio-8080-exec-3] com.pzy.aspect.LogAspect                 : Result : blog :: commentList
-2021-08-20 18:14:59.297  INFO 2456 --- [http-nio-8080-exec-7] com.pzy.aspect.LogAspect                 : Result : {"comment":{"commentCount":3},"blog":{"blogCount":12},"type":{"typeCount":16},"user":{"avatar":"https://s3.bmp.ovh/imgs/2021/08/06438835f7c58b4f.jpg","createTime":1623156849000,"email":"pangzy1013@gmail.com","id":1,"nickname":"nice","updateTime":1623156849000,"username":"nice"}}
-2021-08-20 18:15:29.437  INFO 12756 --- [restartedMain] com.pzy.BlogApplication                  : Starting BlogApplication using Java 11.0.8 on YZP with PID 12756 (F:\WorkDocument\后端\java主流框架\blog\target\classes started by 86177 in F:\WorkDocument\后端\java主流框架\blog)
-2021-08-20 18:15:29.441 DEBUG 12756 --- [restartedMain] com.pzy.BlogApplication                  : Running with Spring Boot v2.4.5, Spring v5.3.6
-2021-08-20 18:15:29.441  INFO 12756 --- [restartedMain] com.pzy.BlogApplication                  : The following profiles are active: dev
-2021-08-20 18:15:29.494  INFO 12756 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
-2021-08-20 18:15:29.494  INFO 12756 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
-2021-08-20 18:15:30.379  INFO 12756 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2021-08-20 18:15:30.463  INFO 12756 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 76 ms. Found 5 JPA repository interfaces.
-2021-08-20 18:15:30.592  WARN 12756 --- [restartedMain] o.m.s.mapper.ClassPathMapperScanner      : No MyBatis mapper was found in '[com.pzy]' package. Please check your configuration.
-2021-08-20 18:15:31.291  INFO 12756 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
-2021-08-20 18:15:31.298  INFO 12756 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2021-08-20 18:15:31.298  INFO 12756 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.45]
-2021-08-20 18:15:31.410  INFO 12756 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2021-08-20 18:15:31.410  INFO 12756 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1915 ms
-2021-08-20 18:15:31.597  INFO 12756 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2021-08-20 18:15:31.627  INFO 12756 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.30.Final
-2021-08-20 18:15:31.731  INFO 12756 --- [restartedMain] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
-2021-08-20 18:15:31.837  INFO 12756 --- [restartedMain] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
-2021-08-20 18:15:33.053  INFO 12756 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
-2021-08-20 18:15:35.897  INFO 12756 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-2021-08-20 18:15:35.915  INFO 12756 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2021-08-20 18:15:36.053  WARN 12756 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : Unable to start LiveReload server
-2021-08-20 18:15:37.469  INFO 12756 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
-2021-08-20 18:15:37.610  INFO 12756 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
-2021-08-20 18:15:38.330  INFO 12756 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
-2021-08-20 18:15:38.343  INFO 12756 --- [restartedMain] com.pzy.BlogApplication                  : Started BlogApplication in 9.42 seconds (JVM running for 11.162)
-2021-08-20 18:16:46.859  INFO 12756 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2021-08-20 18:16:46.860  INFO 12756 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2021-08-20 18:16:46.861  INFO 12756 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
-2021-08-20 18:16:46.904  INFO 12756 --- [http-nio-8080-exec-1] com.pzy.aspect.LogAspect                 : RequestLog : RequestLog{url='http://localhost:8080/blog/43', ip='0:0:0:0:0:0:0:1', classMethod='com.pzy.web.IndexController.blog', args=[43, {}]}
-2021-08-20 18:16:47.610  INFO 12756 --- [http-nio-8080-exec-1] com.pzy.aspect.LogAspect                 : Result : blog
-2021-08-20 18:16:48.813  INFO 12756 --- [http-nio-8080-exec-4] com.pzy.aspect.LogAspect                 : RequestLog : RequestLog{url='http://localhost:8080/indexGetuserInfo', ip='0:0:0:0:0:0:0:1', classMethod='com.pzy.web.IndexController.indexGetUserInfo', args=[]}
-2021-08-20 18:16:48.955  INFO 12756 --- [http-nio-8080-exec-10] com.pzy.aspect.LogAspect                 : RequestLog : RequestLog{url='http://localhost:8080/comments/43', ip='0:0:0:0:0:0:0:1', classMethod='com.pzy.web.CommentController.comments', args=[43, {}]}
-2021-08-20 18:16:49.657  INFO 12756 --- [http-nio-8080-exec-10] com.pzy.aspect.LogAspect                 : Result : blog :: commentList
-2021-08-20 18:16:50.089  INFO 12756 --- [http-nio-8080-exec-4] com.pzy.aspect.LogAspect                 : Result : {"comment":{"commentCount":3},"blog":{"blogCount":12},"type":{"typeCount":16},"user":{"avatar":"https://s3.bmp.ovh/imgs/2021/08/06438835f7c58b4f.jpg","createTime":1623156849000,"email":"pangzy1013@gmail.com","id":1,"nickname":"nice","updateTime":1623156849000,"username":"nice"}}
-2021-08-20 18:30:54.987  INFO 37612 --- [restartedMain] com.pzy.BlogApplication                  : Starting BlogApplication using Java 11.0.8 on YZP with PID 37612 (F:\WorkDocument\后端\java主流框架\blog\target\classes started by 86177 in F:\WorkDocument\后端\java主流框架\blog)
-2021-08-20 18:30:54.990 DEBUG 37612 --- [restartedMain] com.pzy.BlogApplication                  : Running with Spring Boot v2.4.5, Spring v5.3.6
-2021-08-20 18:30:54.990  INFO 37612 --- [restartedMain] com.pzy.BlogApplication                  : The following profiles are active: dev
-2021-08-20 18:30:55.048  INFO 37612 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
-2021-08-20 18:30:55.048  INFO 37612 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
-2021-08-20 18:30:55.944  INFO 37612 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2021-08-20 18:30:56.055  INFO 37612 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 100 ms. Found 5 JPA repository interfaces.
-2021-08-20 18:30:56.203  WARN 37612 --- [restartedMain] o.m.s.mapper.ClassPathMapperScanner      : No MyBatis mapper was found in '[com.pzy]' package. Please check your configuration.
-2021-08-20 18:30:56.841  INFO 37612 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
-2021-08-20 18:30:56.848  INFO 37612 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2021-08-20 18:30:56.848  INFO 37612 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.45]
-2021-08-20 18:30:57.033  INFO 37612 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2021-08-20 18:30:57.033  INFO 37612 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1983 ms
-2021-08-20 18:30:57.278  INFO 37612 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2021-08-20 18:30:57.310  INFO 37612 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.30.Final
-2021-08-20 18:30:57.383  INFO 37612 --- [restartedMain] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
-2021-08-20 18:30:57.473  INFO 37612 --- [restartedMain] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
-2021-08-20 18:30:58.533  INFO 37612 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
-2021-08-20 18:31:01.381  INFO 37612 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-2021-08-20 18:31:01.397  INFO 37612 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2021-08-20 18:31:01.500  WARN 37612 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : Unable to start LiveReload server
-2021-08-20 18:31:02.951  INFO 37612 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
-2021-08-20 18:31:03.087  INFO 37612 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
-2021-08-20 18:31:03.803  INFO 37612 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
-2021-08-20 18:31:03.815  INFO 37612 --- [restartedMain] com.pzy.BlogApplication                  : Started BlogApplication in 9.356 seconds (JVM running for 11.218)
-2021-08-20 18:31:16.059  INFO 37612 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2021-08-20 18:31:16.061  INFO 37612 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2021-08-20 18:31:16.062  INFO 37612 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
-2021-08-20 18:31:16.107  INFO 37612 --- [http-nio-8080-exec-1] com.pzy.aspect.LogAspect                 : RequestLog : RequestLog{url='http://localhost:8080/blog/43', ip='0:0:0:0:0:0:0:1', classMethod='com.pzy.web.IndexController.blog', args=[43, {}]}
-2021-08-20 18:31:16.840  INFO 37612 --- [http-nio-8080-exec-1] com.pzy.aspect.LogAspect                 : Result : blog
-2021-08-20 18:31:18.514  INFO 37612 --- [http-nio-8080-exec-10] com.pzy.aspect.LogAspect                 : RequestLog : RequestLog{url='http://localhost:8080/indexGetuserInfo', ip='0:0:0:0:0:0:0:1', classMethod='com.pzy.web.IndexController.indexGetUserInfo', args=[]}
-2021-08-20 18:31:18.606  INFO 37612 --- [http-nio-8080-exec-1] com.pzy.aspect.LogAspect                 : RequestLog : RequestLog{url='http://localhost:8080/comments/43', ip='0:0:0:0:0:0:0:1', classMethod='com.pzy.web.CommentController.comments', args=[43, {}]}
-2021-08-20 18:31:19.672  INFO 37612 --- [http-nio-8080-exec-1] com.pzy.aspect.LogAspect                 : Result : blog :: commentList
-2021-08-20 18:31:20.743  INFO 37612 --- [http-nio-8080-exec-10] com.pzy.aspect.LogAspect                 : Result : {"comment":{"commentCount":3},"blog":{"blogCount":12},"type":{"typeCount":16},"user":{"avatar":"https://s3.bmp.ovh/imgs/2021/08/06438835f7c58b4f.jpg","createTime":1623156849000,"email":"pangzy1013@gmail.com","id":1,"nickname":"nice","updateTime":1623156849000,"username":"nice"}}
+2021-09-11 00:46:55.184  INFO 13092 --- [restartedMain] com.pzy.BlogApplication                  : Starting BlogApplication using Java 11.0.8 on YZP with PID 13092 (F:\WorkDocument\后端\java主流框架\blog\target\classes started by 86177 in F:\WorkDocument\后端\java主流框架\blog)
+2021-09-11 00:46:55.184 DEBUG 13092 --- [restartedMain] com.pzy.BlogApplication                  : Running with Spring Boot v2.4.5, Spring v5.3.6
+2021-09-11 00:46:55.184  INFO 13092 --- [restartedMain] com.pzy.BlogApplication                  : The following profiles are active: dev
+2021-09-11 00:46:55.232  INFO 13092 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2021-09-11 00:46:55.232  INFO 13092 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2021-09-11 00:46:55.968  INFO 13092 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2021-09-11 00:46:56.048  INFO 13092 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 75 ms. Found 5 JPA repository interfaces.
+2021-09-11 00:46:56.200  WARN 13092 --- [restartedMain] o.m.s.mapper.ClassPathMapperScanner      : No MyBatis mapper was found in '[com.pzy]' package. Please check your configuration.
+2021-09-11 00:46:56.920  INFO 13092 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2021-09-11 00:46:56.928  INFO 13092 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-09-11 00:46:56.928  INFO 13092 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.45]
+2021-09-11 00:46:57.088  INFO 13092 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2021-09-11 00:46:57.088  INFO 13092 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1848 ms
+2021-09-11 00:46:57.368  INFO 13092 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2021-09-11 00:46:57.416  INFO 13092 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.30.Final
+2021-09-11 00:46:57.536  INFO 13092 --- [restartedMain] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2021-09-11 00:46:57.672  INFO 13092 --- [restartedMain] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
+2021-09-11 00:47:13.854  INFO 13092 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+2021-09-11 00:47:17.119  INFO 13092 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-09-11 00:47:17.135  INFO 13092 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2021-09-11 00:47:17.213  INFO 13092 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2021-09-11 00:47:18.263  INFO 13092 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2021-09-11 00:47:18.375  INFO 13092 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2021-09-11 00:47:19.048  INFO 13092 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2021-09-11 00:47:19.056  INFO 13092 --- [restartedMain] com.pzy.BlogApplication                  : Started BlogApplication in 24.366 seconds (JVM running for 25.918)
+2021-09-11 00:47:20.548  INFO 13092 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-09-11 00:47:20.548  INFO 13092 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2021-09-11 00:47:20.548  INFO 13092 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 0 ms
+2021-09-11 00:47:20.829  WARN 13092 --- [http-nio-8080-exec-1] o.a.c.util.SessionIdGeneratorBase        : Creation of SecureRandom instance for session ID generation using [SHA1PRNG] took [257] milliseconds.
+2021-09-11 00:48:53.796  INFO 12112 --- [restartedMain] com.pzy.BlogApplication                  : Starting BlogApplication using Java 11.0.8 on YZP with PID 12112 (F:\WorkDocument\后端\java主流框架\blog\target\classes started by 86177 in F:\WorkDocument\后端\java主流框架\blog)
+2021-09-11 00:48:53.796 DEBUG 12112 --- [restartedMain] com.pzy.BlogApplication                  : Running with Spring Boot v2.4.5, Spring v5.3.6
+2021-09-11 00:48:53.796  INFO 12112 --- [restartedMain] com.pzy.BlogApplication                  : The following profiles are active: dev
+2021-09-11 00:48:53.844  INFO 12112 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2021-09-11 00:48:53.844  INFO 12112 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2021-09-11 00:48:54.924  INFO 12112 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2021-09-11 00:48:55.020  INFO 12112 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 86 ms. Found 5 JPA repository interfaces.
+2021-09-11 00:48:55.192  WARN 12112 --- [restartedMain] o.m.s.mapper.ClassPathMapperScanner      : No MyBatis mapper was found in '[com.pzy]' package. Please check your configuration.
+2021-09-11 00:48:55.829  INFO 12112 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2021-09-11 00:48:55.837  INFO 12112 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-09-11 00:48:55.837  INFO 12112 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.45]
+2021-09-11 00:48:56.085  INFO 12112 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2021-09-11 00:48:56.085  INFO 12112 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2241 ms
+2021-09-11 00:48:56.509  INFO 12112 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2021-09-11 00:48:56.581  INFO 12112 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.30.Final
+2021-09-11 00:48:56.700  INFO 12112 --- [restartedMain] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2021-09-11 00:48:56.816  INFO 12112 --- [restartedMain] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
+2021-09-11 00:48:58.614  INFO 12112 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+2021-09-11 00:49:02.271  INFO 12112 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-09-11 00:49:02.295  INFO 12112 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2021-09-11 00:49:02.396  INFO 12112 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2021-09-11 00:49:04.052  INFO 12112 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2021-09-11 00:49:04.204  INFO 12112 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2021-09-11 00:49:04.974  INFO 12112 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2021-09-11 00:49:04.991  INFO 12112 --- [restartedMain] com.pzy.BlogApplication                  : Started BlogApplication in 11.716 seconds (JVM running for 13.471)
+2021-09-11 00:49:24.358  INFO 12112 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-09-11 00:49:24.366  INFO 12112 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2021-09-11 00:49:24.366  INFO 12112 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 0 ms
+2021-09-11 00:49:24.828  WARN 12112 --- [http-nio-8080-exec-1] o.a.c.util.SessionIdGeneratorBase        : Creation of SecureRandom instance for session ID generation using [SHA1PRNG] took [438] milliseconds.
+2021-09-11 01:03:51.384  INFO 18112 --- [restartedMain] com.pzy.BlogApplication                  : Starting BlogApplication using Java 11.0.8 on YZP with PID 18112 (F:\WorkDocument\后端\java主流框架\blog\target\classes started by 86177 in F:\WorkDocument\后端\java主流框架\blog)
+2021-09-11 01:03:51.399 DEBUG 18112 --- [restartedMain] com.pzy.BlogApplication                  : Running with Spring Boot v2.4.5, Spring v5.3.6
+2021-09-11 01:03:51.399  INFO 18112 --- [restartedMain] com.pzy.BlogApplication                  : The following profiles are active: dev
+2021-09-11 01:03:51.447  INFO 18112 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2021-09-11 01:03:51.447  INFO 18112 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2021-09-11 01:03:52.027  INFO 18112 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2021-09-11 01:03:52.107  INFO 18112 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 67 ms. Found 5 JPA repository interfaces.
+2021-09-11 01:03:52.249  WARN 18112 --- [restartedMain] o.m.s.mapper.ClassPathMapperScanner      : No MyBatis mapper was found in '[com.pzy]' package. Please check your configuration.
+2021-09-11 01:03:52.804  INFO 18112 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2021-09-11 01:03:52.804  INFO 18112 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-09-11 01:03:52.804  INFO 18112 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.45]
+2021-09-11 01:03:52.914  INFO 18112 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2021-09-11 01:03:52.914  INFO 18112 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1467 ms
+2021-09-11 01:03:53.171  INFO 18112 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2021-09-11 01:03:53.202  INFO 18112 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.30.Final
+2021-09-11 01:03:53.265  INFO 18112 --- [restartedMain] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2021-09-11 01:03:53.343  INFO 18112 --- [restartedMain] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
+2021-09-11 01:03:54.602  INFO 18112 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+2021-09-11 01:03:57.844  INFO 18112 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-09-11 01:03:57.875  INFO 18112 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2021-09-11 01:03:58.000  INFO 18112 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2021-09-11 01:03:59.684  INFO 18112 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2021-09-11 01:03:59.825  INFO 18112 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2021-09-11 01:04:00.512  INFO 18112 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2021-09-11 01:04:00.528  INFO 18112 --- [restartedMain] com.pzy.BlogApplication                  : Started BlogApplication in 9.607 seconds (JVM running for 10.881)
+2021-09-11 01:04:07.949  INFO 18112 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-09-11 01:04:07.949  INFO 18112 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2021-09-11 01:04:07.949  INFO 18112 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 0 ms
+2021-09-11 01:04:08.391  WARN 18112 --- [http-nio-8080-exec-1] o.a.c.util.SessionIdGeneratorBase        : Creation of SecureRandom instance for session ID generation using [SHA1PRNG] took [418] milliseconds.
+2021-09-11 01:13:35.283  INFO 3448 --- [restartedMain] com.pzy.BlogApplication                  : Starting BlogApplication using Java 11.0.8 on YZP with PID 3448 (F:\WorkDocument\后端\java主流框架\blog\target\classes started by 86177 in F:\WorkDocument\后端\java主流框架\blog)
+2021-09-11 01:13:35.283 DEBUG 3448 --- [restartedMain] com.pzy.BlogApplication                  : Running with Spring Boot v2.4.5, Spring v5.3.6
+2021-09-11 01:13:35.283  INFO 3448 --- [restartedMain] com.pzy.BlogApplication                  : The following profiles are active: dev
+2021-09-11 01:13:35.330  INFO 3448 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2021-09-11 01:13:35.330  INFO 3448 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2021-09-11 01:13:36.056  INFO 3448 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2021-09-11 01:13:36.134  INFO 3448 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 70 ms. Found 5 JPA repository interfaces.
+2021-09-11 01:13:36.259  WARN 3448 --- [restartedMain] o.m.s.mapper.ClassPathMapperScanner      : No MyBatis mapper was found in '[com.pzy]' package. Please check your configuration.
+2021-09-11 01:13:36.806  INFO 3448 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2021-09-11 01:13:36.806  INFO 3448 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-09-11 01:13:36.806  INFO 3448 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.45]
+2021-09-11 01:13:36.983  INFO 3448 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2021-09-11 01:13:36.983  INFO 3448 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1653 ms
+2021-09-11 01:13:37.235  INFO 3448 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2021-09-11 01:13:37.266  INFO 3448 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.30.Final
+2021-09-11 01:13:37.347  INFO 3448 --- [restartedMain] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2021-09-11 01:13:37.458  INFO 3448 --- [restartedMain] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
+2021-09-11 01:13:38.983  INFO 3448 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+2021-09-11 01:13:42.236  INFO 3448 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-09-11 01:13:42.251  INFO 3448 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2021-09-11 01:13:42.380  INFO 3448 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2021-09-11 01:13:44.121  INFO 3448 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2021-09-11 01:13:44.302  INFO 3448 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2021-09-11 01:13:45.155  INFO 3448 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2021-09-11 01:13:45.171  INFO 3448 --- [restartedMain] com.pzy.BlogApplication                  : Started BlogApplication in 10.43 seconds (JVM running for 12.029)
+2021-09-11 01:16:01.785  INFO 3448 --- [http-nio-8080-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-09-11 01:16:01.785  INFO 3448 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2021-09-11 01:16:01.785  INFO 3448 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 0 ms
+2021-09-11 01:16:02.336  WARN 3448 --- [http-nio-8080-exec-2] o.a.c.util.SessionIdGeneratorBase        : Creation of SecureRandom instance for session ID generation using [SHA1PRNG] took [503] milliseconds.
+2021-09-11 01:17:01.001  INFO 16420 --- [restartedMain] com.pzy.BlogApplication                  : Starting BlogApplication using Java 11.0.8 on YZP with PID 16420 (F:\WorkDocument\后端\java主流框架\blog\target\classes started by 86177 in F:\WorkDocument\后端\java主流框架\blog)
+2021-09-11 01:17:01.001 DEBUG 16420 --- [restartedMain] com.pzy.BlogApplication                  : Running with Spring Boot v2.4.5, Spring v5.3.6
+2021-09-11 01:17:01.001  INFO 16420 --- [restartedMain] com.pzy.BlogApplication                  : The following profiles are active: dev
+2021-09-11 01:17:01.032  INFO 16420 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2021-09-11 01:17:01.032  INFO 16420 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2021-09-11 01:17:01.673  INFO 16420 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2021-09-11 01:17:01.735  INFO 16420 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 62 ms. Found 5 JPA repository interfaces.
+2021-09-11 01:17:01.849  WARN 16420 --- [restartedMain] o.m.s.mapper.ClassPathMapperScanner      : No MyBatis mapper was found in '[com.pzy]' package. Please check your configuration.
+2021-09-11 01:17:02.403  INFO 16420 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2021-09-11 01:17:02.403  INFO 16420 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-09-11 01:17:02.403  INFO 16420 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.45]
+2021-09-11 01:17:02.513  INFO 16420 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2021-09-11 01:17:02.513  INFO 16420 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1481 ms
+2021-09-11 01:17:02.778  INFO 16420 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2021-09-11 01:17:02.809  INFO 16420 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.30.Final
+2021-09-11 01:17:02.872  INFO 16420 --- [restartedMain] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2021-09-11 01:17:02.966  INFO 16420 --- [restartedMain] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
+2021-09-11 01:17:04.508  INFO 16420 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+2021-09-11 01:17:07.952  INFO 16420 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-09-11 01:17:07.984  INFO 16420 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2021-09-11 01:17:08.125  INFO 16420 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2021-09-11 01:17:09.963  INFO 16420 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2021-09-11 01:17:10.140  INFO 16420 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2021-09-11 01:17:10.953  INFO 16420 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2021-09-11 01:17:10.968  INFO 16420 --- [restartedMain] com.pzy.BlogApplication                  : Started BlogApplication in 10.417 seconds (JVM running for 11.977)
+2021-09-11 01:17:17.783  INFO 16420 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-09-11 01:17:17.783  INFO 16420 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2021-09-11 01:17:17.791  INFO 16420 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 8 ms
+2021-09-11 01:17:18.422  WARN 16420 --- [http-nio-8080-exec-1] o.a.c.util.SessionIdGeneratorBase        : Creation of SecureRandom instance for session ID generation using [SHA1PRNG] took [583] milliseconds.
+2021-09-11 01:17:43.518  INFO 18344 --- [restartedMain] com.pzy.BlogApplication                  : Starting BlogApplication using Java 11.0.8 on YZP with PID 18344 (F:\WorkDocument\后端\java主流框架\blog\target\classes started by 86177 in F:\WorkDocument\后端\java主流框架\blog)
+2021-09-11 01:17:43.518 DEBUG 18344 --- [restartedMain] com.pzy.BlogApplication                  : Running with Spring Boot v2.4.5, Spring v5.3.6
+2021-09-11 01:17:43.518  INFO 18344 --- [restartedMain] com.pzy.BlogApplication                  : The following profiles are active: dev
+2021-09-11 01:17:43.549  INFO 18344 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2021-09-11 01:17:43.549  INFO 18344 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2021-09-11 01:17:44.110  INFO 18344 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2021-09-11 01:17:44.172  INFO 18344 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 59 ms. Found 5 JPA repository interfaces.
+2021-09-11 01:17:44.283  WARN 18344 --- [restartedMain] o.m.s.mapper.ClassPathMapperScanner      : No MyBatis mapper was found in '[com.pzy]' package. Please check your configuration.
+2021-09-11 01:17:44.767  INFO 18344 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2021-09-11 01:17:44.783  INFO 18344 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-09-11 01:17:44.783  INFO 18344 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.45]
+2021-09-11 01:17:44.877  INFO 18344 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2021-09-11 01:17:44.877  INFO 18344 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1328 ms
+2021-09-11 01:17:45.111  INFO 18344 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2021-09-11 01:17:45.127  INFO 18344 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.30.Final
+2021-09-11 01:17:45.205  INFO 18344 --- [restartedMain] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2021-09-11 01:17:45.283  INFO 18344 --- [restartedMain] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
+2021-09-11 01:17:46.779  INFO 18344 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+2021-09-11 01:17:50.049  INFO 18344 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-09-11 01:17:50.065  INFO 18344 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2021-09-11 01:17:50.159  INFO 18344 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2021-09-11 01:17:51.828  INFO 18344 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2021-09-11 01:17:52.015  INFO 18344 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2021-09-11 01:17:52.809  INFO 18344 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2021-09-11 01:17:52.824  INFO 18344 --- [restartedMain] com.pzy.BlogApplication                  : Started BlogApplication in 9.704 seconds (JVM running for 11.287)
+2021-09-11 01:18:01.570  INFO 18344 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-09-11 01:18:01.570  INFO 18344 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2021-09-11 01:18:01.570  INFO 18344 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 0 ms
+2021-09-11 01:18:02.228  WARN 18344 --- [http-nio-8080-exec-1] o.a.c.util.SessionIdGeneratorBase        : Creation of SecureRandom instance for session ID generation using [SHA1PRNG] took [626] milliseconds.
+2021-09-11 01:20:52.222  INFO 18936 --- [restartedMain] com.pzy.BlogApplication                  : Starting BlogApplication using Java 11.0.8 on YZP with PID 18936 (F:\WorkDocument\后端\java主流框架\blog\target\classes started by 86177 in F:\WorkDocument\后端\java主流框架\blog)
+2021-09-11 01:20:52.224 DEBUG 18936 --- [restartedMain] com.pzy.BlogApplication                  : Running with Spring Boot v2.4.5, Spring v5.3.6
+2021-09-11 01:20:52.224  INFO 18936 --- [restartedMain] com.pzy.BlogApplication                  : The following profiles are active: dev
+2021-09-11 01:20:52.255  INFO 18936 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2021-09-11 01:20:52.255  INFO 18936 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2021-09-11 01:20:52.928  INFO 18936 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2021-09-11 01:20:53.006  INFO 18936 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 69 ms. Found 5 JPA repository interfaces.
+2021-09-11 01:20:53.120  WARN 18936 --- [restartedMain] o.m.s.mapper.ClassPathMapperScanner      : No MyBatis mapper was found in '[com.pzy]' package. Please check your configuration.
+2021-09-11 01:20:53.720  INFO 18936 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2021-09-11 01:20:53.736  INFO 18936 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-09-11 01:20:53.736  INFO 18936 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.45]
+2021-09-11 01:20:53.861  INFO 18936 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2021-09-11 01:20:53.861  INFO 18936 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1606 ms
+2021-09-11 01:20:54.064  INFO 18936 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2021-09-11 01:20:54.095  INFO 18936 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.30.Final
+2021-09-11 01:20:54.158  INFO 18936 --- [restartedMain] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2021-09-11 01:20:54.252  INFO 18936 --- [restartedMain] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
+2021-09-11 01:20:56.023  INFO 18936 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+2021-09-11 01:20:59.385  INFO 18936 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-09-11 01:20:59.385  INFO 18936 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2021-09-11 01:20:59.478  INFO 18936 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2021-09-11 01:21:01.125  INFO 18936 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2021-09-11 01:21:01.297  INFO 18936 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2021-09-11 01:21:02.004  INFO 18936 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2021-09-11 01:21:02.020  INFO 18936 --- [restartedMain] com.pzy.BlogApplication                  : Started BlogApplication in 10.212 seconds (JVM running for 11.548)
+2021-09-11 01:21:16.937  INFO 18936 --- [http-nio-8080-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-09-11 01:21:16.945  INFO 18936 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2021-09-11 01:21:16.945  INFO 18936 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 0 ms
+2021-09-11 01:21:17.567  WARN 18936 --- [http-nio-8080-exec-2] o.a.c.util.SessionIdGeneratorBase        : Creation of SecureRandom instance for session ID generation using [SHA1PRNG] took [606] milliseconds.
+2021-09-11 01:24:09.863  INFO 8752 --- [restartedMain] com.pzy.BlogApplication                  : Starting BlogApplication using Java 11.0.8 on YZP with PID 8752 (F:\WorkDocument\后端\java主流框架\blog\target\classes started by 86177 in F:\WorkDocument\后端\java主流框架\blog)
+2021-09-11 01:24:09.879 DEBUG 8752 --- [restartedMain] com.pzy.BlogApplication                  : Running with Spring Boot v2.4.5, Spring v5.3.6
+2021-09-11 01:24:09.879  INFO 8752 --- [restartedMain] com.pzy.BlogApplication                  : The following profiles are active: dev
+2021-09-11 01:24:09.929  INFO 8752 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2021-09-11 01:24:09.929  INFO 8752 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2021-09-11 01:24:10.764  INFO 8752 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2021-09-11 01:24:10.933  INFO 8752 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 141 ms. Found 5 JPA repository interfaces.
+2021-09-11 01:24:11.194  WARN 8752 --- [restartedMain] o.m.s.mapper.ClassPathMapperScanner      : No MyBatis mapper was found in '[com.pzy]' package. Please check your configuration.
+2021-09-11 01:24:11.815  INFO 8752 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2021-09-11 01:24:11.815  INFO 8752 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-09-11 01:24:11.815  INFO 8752 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.45]
+2021-09-11 01:24:11.952  INFO 8752 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2021-09-11 01:24:11.952  INFO 8752 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2023 ms
+2021-09-11 01:24:12.201  INFO 8752 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2021-09-11 01:24:12.244  INFO 8752 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.30.Final
+2021-09-11 01:24:12.320  INFO 8752 --- [restartedMain] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2021-09-11 01:24:12.414  INFO 8752 --- [restartedMain] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
+2021-09-11 01:24:13.803  INFO 8752 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+2021-09-11 01:24:16.912  INFO 8752 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-09-11 01:24:16.937  INFO 8752 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2021-09-11 01:24:17.062  INFO 8752 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2021-09-11 01:24:18.712  INFO 8752 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2021-09-11 01:24:18.869  INFO 8752 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2021-09-11 01:24:19.647  INFO 8752 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2021-09-11 01:24:19.663  INFO 8752 --- [restartedMain] com.pzy.BlogApplication                  : Started BlogApplication in 10.32 seconds (JVM running for 11.954)
+2021-09-11 01:24:24.608  INFO 8752 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-09-11 01:24:24.608  INFO 8752 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2021-09-11 01:24:24.616  INFO 8752 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 8 ms
+2021-09-11 01:25:02.503  WARN 8752 --- [http-nio-8080-exec-2] o.a.c.util.SessionIdGeneratorBase        : Creation of SecureRandom instance for session ID generation using [SHA1PRNG] took [568] milliseconds.
+2021-09-11 01:37:18.185  INFO 6904 --- [restartedMain] com.pzy.BlogApplication                  : Starting BlogApplication using Java 11.0.8 on YZP with PID 6904 (F:\WorkDocument\后端\java主流框架\blog\target\classes started by 86177 in F:\WorkDocument\后端\java主流框架\blog)
+2021-09-11 01:37:18.185 DEBUG 6904 --- [restartedMain] com.pzy.BlogApplication                  : Running with Spring Boot v2.4.5, Spring v5.3.6
+2021-09-11 01:37:18.185  INFO 6904 --- [restartedMain] com.pzy.BlogApplication                  : The following profiles are active: dev
+2021-09-11 01:37:18.232  INFO 6904 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2021-09-11 01:37:18.232  INFO 6904 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2021-09-11 01:37:19.204  INFO 6904 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2021-09-11 01:37:19.352  INFO 6904 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 135 ms. Found 5 JPA repository interfaces.
+2021-09-11 01:37:19.532  WARN 6904 --- [restartedMain] o.m.s.mapper.ClassPathMapperScanner      : No MyBatis mapper was found in '[com.pzy]' package. Please check your configuration.
+2021-09-11 01:37:20.252  INFO 6904 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2021-09-11 01:37:20.268  INFO 6904 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-09-11 01:37:20.268  INFO 6904 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.45]
+2021-09-11 01:37:20.521  INFO 6904 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2021-09-11 01:37:20.521  INFO 6904 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2289 ms
+2021-09-11 01:37:20.730  INFO 6904 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2021-09-11 01:37:20.761  INFO 6904 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.30.Final
+2021-09-11 01:37:20.840  INFO 6904 --- [restartedMain] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2021-09-11 01:37:20.989  INFO 6904 --- [restartedMain] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
+2021-09-11 01:37:22.101  INFO 6904 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+2021-09-11 01:37:25.520  INFO 6904 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-09-11 01:37:25.544  INFO 6904 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2021-09-11 01:37:25.712  INFO 6904 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2021-09-11 01:37:27.539  INFO 6904 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2021-09-11 01:37:27.677  INFO 6904 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2021-09-11 01:37:28.451  INFO 6904 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2021-09-11 01:37:28.459  INFO 6904 --- [restartedMain] com.pzy.BlogApplication                  : Started BlogApplication in 10.804 seconds (JVM running for 12.449)
+2021-09-11 01:38:58.300  INFO 13372 --- [restartedMain] com.pzy.BlogApplication                  : Starting BlogApplication using Java 11.0.8 on YZP with PID 13372 (F:\WorkDocument\后端\java主流框架\blog\target\classes started by 86177 in F:\WorkDocument\后端\java主流框架\blog)
+2021-09-11 01:38:58.300 DEBUG 13372 --- [restartedMain] com.pzy.BlogApplication                  : Running with Spring Boot v2.4.5, Spring v5.3.6
+2021-09-11 01:38:58.300  INFO 13372 --- [restartedMain] com.pzy.BlogApplication                  : The following profiles are active: dev
+2021-09-11 01:38:58.347  INFO 13372 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2021-09-11 01:38:58.347  INFO 13372 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2021-09-11 01:38:59.227  INFO 13372 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2021-09-11 01:38:59.321  INFO 13372 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 80 ms. Found 5 JPA repository interfaces.
+2021-09-11 01:38:59.478  WARN 13372 --- [restartedMain] o.m.s.mapper.ClassPathMapperScanner      : No MyBatis mapper was found in '[com.pzy]' package. Please check your configuration.
+2021-09-11 01:39:00.343  INFO 13372 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2021-09-11 01:39:00.343  INFO 13372 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-09-11 01:39:00.343  INFO 13372 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.45]
+2021-09-11 01:39:00.514  INFO 13372 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2021-09-11 01:39:00.514  INFO 13372 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2167 ms
+2021-09-11 01:39:00.889  INFO 13372 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2021-09-11 01:39:00.921  INFO 13372 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.30.Final
+2021-09-11 01:39:01.030  INFO 13372 --- [restartedMain] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2021-09-11 01:39:01.171  INFO 13372 --- [restartedMain] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
+2021-09-11 01:39:03.194  INFO 13372 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+2021-09-11 01:39:07.675  INFO 13372 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-09-11 01:39:07.691  INFO 13372 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2021-09-11 01:39:07.800  INFO 13372 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2021-09-11 01:39:09.280  INFO 13372 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2021-09-11 01:39:09.436  INFO 13372 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2021-09-11 01:39:10.223  INFO 13372 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2021-09-11 01:39:10.239  INFO 13372 --- [restartedMain] com.pzy.BlogApplication                  : Started BlogApplication in 12.452 seconds (JVM running for 14.083)
+2021-09-11 01:50:56.320  INFO 13212 --- [restartedMain] com.pzy.BlogApplication                  : Starting BlogApplication using Java 11.0.8 on YZP with PID 13212 (F:\WorkDocument\后端\java主流框架\blog\target\classes started by 86177 in F:\WorkDocument\后端\java主流框架\blog)
+2021-09-11 01:50:56.320 DEBUG 13212 --- [restartedMain] com.pzy.BlogApplication                  : Running with Spring Boot v2.4.5, Spring v5.3.6
+2021-09-11 01:50:56.320  INFO 13212 --- [restartedMain] com.pzy.BlogApplication                  : The following profiles are active: dev
+2021-09-11 01:50:56.385  INFO 13212 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2021-09-11 01:50:56.385  INFO 13212 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2021-09-11 01:50:57.197  INFO 13212 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2021-09-11 01:50:57.291  INFO 13212 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 82 ms. Found 5 JPA repository interfaces.
+2021-09-11 01:50:57.431  WARN 13212 --- [restartedMain] o.m.s.mapper.ClassPathMapperScanner      : No MyBatis mapper was found in '[com.pzy]' package. Please check your configuration.
+2021-09-11 01:50:58.114  INFO 13212 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2021-09-11 01:50:58.114  INFO 13212 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-09-11 01:50:58.114  INFO 13212 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.45]
+2021-09-11 01:50:58.240  INFO 13212 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2021-09-11 01:50:58.240  INFO 13212 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1854 ms
+2021-09-11 01:50:58.490  INFO 13212 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2021-09-11 01:50:58.521  INFO 13212 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.30.Final
+2021-09-11 01:50:58.615  INFO 13212 --- [restartedMain] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2021-09-11 01:50:58.709  INFO 13212 --- [restartedMain] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
+2021-09-11 01:51:00.408  INFO 13212 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+2021-09-11 01:51:04.147  INFO 13212 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-09-11 01:51:04.163  INFO 13212 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2021-09-11 01:51:04.319  INFO 13212 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2021-09-11 01:51:06.139  INFO 13212 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2021-09-11 01:51:06.311  INFO 13212 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2021-09-11 01:51:07.121  INFO 13212 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2021-09-11 01:51:07.129  INFO 13212 --- [restartedMain] com.pzy.BlogApplication                  : Started BlogApplication in 11.343 seconds (JVM running for 12.886)
+2021-09-11 01:51:55.043  INFO 13212 --- [http-nio-8080-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-09-11 01:51:55.043  INFO 13212 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2021-09-11 01:51:55.043  INFO 13212 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 0 ms
+2021-09-11 01:51:55.527  WARN 13212 --- [http-nio-8080-exec-2] o.a.c.util.SessionIdGeneratorBase        : Creation of SecureRandom instance for session ID generation using [SHA1PRNG] took [456] milliseconds.
+2021-09-11 01:53:37.462  INFO 16112 --- [restartedMain] com.pzy.BlogApplication                  : Starting BlogApplication using Java 11.0.8 on YZP with PID 16112 (F:\WorkDocument\后端\java主流框架\blog\target\classes started by 86177 in F:\WorkDocument\后端\java主流框架\blog)
+2021-09-11 01:53:37.462 DEBUG 16112 --- [restartedMain] com.pzy.BlogApplication                  : Running with Spring Boot v2.4.5, Spring v5.3.6
+2021-09-11 01:53:37.462  INFO 16112 --- [restartedMain] com.pzy.BlogApplication                  : The following profiles are active: dev
+2021-09-11 01:53:37.502  INFO 16112 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2021-09-11 01:53:37.502  INFO 16112 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2021-09-11 01:53:38.126  INFO 16112 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2021-09-11 01:53:38.205  INFO 16112 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 75 ms. Found 5 JPA repository interfaces.
+2021-09-11 01:53:38.392  WARN 16112 --- [restartedMain] o.m.s.mapper.ClassPathMapperScanner      : No MyBatis mapper was found in '[com.pzy]' package. Please check your configuration.
+2021-09-11 01:53:38.986  INFO 16112 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2021-09-11 01:53:38.994  INFO 16112 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-09-11 01:53:38.994  INFO 16112 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.45]
+2021-09-11 01:53:39.098  INFO 16112 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2021-09-11 01:53:39.098  INFO 16112 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1596 ms
+2021-09-11 01:53:39.323  INFO 16112 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2021-09-11 01:53:39.354  INFO 16112 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.30.Final
+2021-09-11 01:53:39.416  INFO 16112 --- [restartedMain] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2021-09-11 01:53:39.588  INFO 16112 --- [restartedMain] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
+2021-09-11 01:53:41.058  INFO 16112 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+2021-09-11 01:53:44.919  INFO 16112 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-09-11 01:53:44.950  INFO 16112 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2021-09-11 01:53:45.075  INFO 16112 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2021-09-11 01:53:53.299  INFO 1552 --- [restartedMain] com.pzy.BlogApplication                  : Starting BlogApplication using Java 11.0.8 on YZP with PID 1552 (F:\WorkDocument\后端\java主流框架\blog\target\classes started by 86177 in F:\WorkDocument\后端\java主流框架\blog)
+2021-09-11 01:53:53.307 DEBUG 1552 --- [restartedMain] com.pzy.BlogApplication                  : Running with Spring Boot v2.4.5, Spring v5.3.6
+2021-09-11 01:53:53.307  INFO 1552 --- [restartedMain] com.pzy.BlogApplication                  : The following profiles are active: dev
+2021-09-11 01:53:53.339  INFO 1552 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2021-09-11 01:53:53.339  INFO 1552 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2021-09-11 01:53:53.947  INFO 1552 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2021-09-11 01:53:54.053  INFO 1552 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 95 ms. Found 5 JPA repository interfaces.
+2021-09-11 01:53:54.197  WARN 1552 --- [restartedMain] o.m.s.mapper.ClassPathMapperScanner      : No MyBatis mapper was found in '[com.pzy]' package. Please check your configuration.
+2021-09-11 01:53:54.764  INFO 1552 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2021-09-11 01:53:54.780  INFO 1552 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-09-11 01:53:54.780  INFO 1552 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.45]
+2021-09-11 01:53:55.024  INFO 1552 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2021-09-11 01:53:55.032  INFO 1552 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1685 ms
+2021-09-11 01:53:55.380  INFO 1552 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2021-09-11 01:53:55.447  INFO 1552 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.30.Final
+2021-09-11 01:53:55.591  INFO 1552 --- [restartedMain] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2021-09-11 01:53:55.691  INFO 1552 --- [restartedMain] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
+2021-09-11 01:53:57.430  INFO 1552 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+2021-09-11 01:54:00.962  INFO 1552 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-09-11 01:54:00.978  INFO 1552 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2021-09-11 01:54:01.103  INFO 1552 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2021-09-11 01:54:02.882  INFO 1552 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2021-09-11 01:54:03.100  INFO 1552 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2021-09-11 01:54:03.999  INFO 1552 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2021-09-11 01:54:04.031  INFO 1552 --- [restartedMain] com.pzy.BlogApplication                  : Started BlogApplication in 11.116 seconds (JVM running for 12.328)
+2021-09-11 01:54:16.928  INFO 1552 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-09-11 01:54:16.928  INFO 1552 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2021-09-11 01:54:16.928  INFO 1552 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 0 ms
+2021-09-11 01:54:17.493  WARN 1552 --- [http-nio-8080-exec-1] o.a.c.util.SessionIdGeneratorBase        : Creation of SecureRandom instance for session ID generation using [SHA1PRNG] took [533] milliseconds.
+2021-09-11 01:56:47.629  INFO 1724 --- [restartedMain] com.pzy.BlogApplication                  : Starting BlogApplication using Java 11.0.8 on YZP with PID 1724 (F:\WorkDocument\后端\java主流框架\blog\target\classes started by 86177 in F:\WorkDocument\后端\java主流框架\blog)
+2021-09-11 01:56:47.645 DEBUG 1724 --- [restartedMain] com.pzy.BlogApplication                  : Running with Spring Boot v2.4.5, Spring v5.3.6
+2021-09-11 01:56:47.645  INFO 1724 --- [restartedMain] com.pzy.BlogApplication                  : The following profiles are active: dev
+2021-09-11 01:56:47.676  INFO 1724 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2021-09-11 01:56:47.676  INFO 1724 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2021-09-11 01:56:48.320  INFO 1724 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2021-09-11 01:56:48.398  INFO 1724 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 62 ms. Found 5 JPA repository interfaces.
+2021-09-11 01:56:48.511  WARN 1724 --- [restartedMain] o.m.s.mapper.ClassPathMapperScanner      : No MyBatis mapper was found in '[com.pzy]' package. Please check your configuration.
+2021-09-11 01:56:49.075  INFO 1724 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2021-09-11 01:56:49.075  INFO 1724 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-09-11 01:56:49.075  INFO 1724 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.45]
+2021-09-11 01:56:49.184  INFO 1724 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2021-09-11 01:56:49.184  INFO 1724 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1508 ms
+2021-09-11 01:56:49.388  INFO 1724 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2021-09-11 01:56:49.419  INFO 1724 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.30.Final
+2021-09-11 01:56:49.481  INFO 1724 --- [restartedMain] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2021-09-11 01:56:49.559  INFO 1724 --- [restartedMain] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
+2021-09-11 01:56:51.110  INFO 1724 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+2021-09-11 01:56:54.556  INFO 1724 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-09-11 01:56:54.587  INFO 1724 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2021-09-11 01:56:54.696  INFO 1724 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2021-09-11 01:56:56.326  INFO 1724 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2021-09-11 01:56:56.483  INFO 1724 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2021-09-11 01:56:57.260  INFO 1724 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2021-09-11 01:56:57.276  INFO 1724 --- [restartedMain] com.pzy.BlogApplication                  : Started BlogApplication in 10.178 seconds (JVM running for 11.746)
+2021-09-11 01:57:13.531  INFO 1724 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-09-11 01:57:13.531  INFO 1724 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2021-09-11 01:57:13.531  INFO 1724 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 0 ms
+2021-09-11 01:57:14.091  WARN 1724 --- [http-nio-8080-exec-1] o.a.c.util.SessionIdGeneratorBase        : Creation of SecureRandom instance for session ID generation using [SHA1PRNG] took [528] milliseconds.
+2021-09-11 01:59:22.763  INFO 8316 --- [restartedMain] com.pzy.BlogApplication                  : Starting BlogApplication using Java 11.0.8 on YZP with PID 8316 (F:\WorkDocument\后端\java主流框架\blog\target\classes started by 86177 in F:\WorkDocument\后端\java主流框架\blog)
+2021-09-11 01:59:22.763 DEBUG 8316 --- [restartedMain] com.pzy.BlogApplication                  : Running with Spring Boot v2.4.5, Spring v5.3.6
+2021-09-11 01:59:22.763  INFO 8316 --- [restartedMain] com.pzy.BlogApplication                  : The following profiles are active: dev
+2021-09-11 01:59:22.810  INFO 8316 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2021-09-11 01:59:22.810  INFO 8316 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2021-09-11 01:59:23.593  INFO 8316 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2021-09-11 01:59:23.702  INFO 8316 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 95 ms. Found 5 JPA repository interfaces.
+2021-09-11 01:59:23.879  WARN 8316 --- [restartedMain] o.m.s.mapper.ClassPathMapperScanner      : No MyBatis mapper was found in '[com.pzy]' package. Please check your configuration.
+2021-09-11 01:59:24.573  INFO 8316 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2021-09-11 01:59:24.581  INFO 8316 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-09-11 01:59:24.581  INFO 8316 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.45]
+2021-09-11 01:59:24.709  INFO 8316 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2021-09-11 01:59:24.709  INFO 8316 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1899 ms
+2021-09-11 01:59:24.965  INFO 8316 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2021-09-11 01:59:25.013  INFO 8316 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.30.Final
+2021-09-11 01:59:25.092  INFO 8316 --- [restartedMain] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2021-09-11 01:59:25.206  INFO 8316 --- [restartedMain] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
+2021-09-11 01:59:27.056  INFO 8316 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+2021-09-11 01:59:30.619  INFO 8316 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-09-11 01:59:30.635  INFO 8316 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2021-09-11 01:59:30.774  INFO 8316 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2021-09-11 01:59:32.770  INFO 8316 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2021-09-11 01:59:32.900  INFO 8316 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2021-09-11 01:59:34.006  INFO 8316 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2021-09-11 01:59:34.022  INFO 8316 --- [restartedMain] com.pzy.BlogApplication                  : Started BlogApplication in 11.805 seconds (JVM running for 13.374)
+2021-09-11 02:00:11.784  INFO 8316 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-09-11 02:00:11.784  INFO 8316 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2021-09-11 02:00:11.784  INFO 8316 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 0 ms
+2021-09-11 02:00:12.385  WARN 8316 --- [http-nio-8080-exec-1] o.a.c.util.SessionIdGeneratorBase        : Creation of SecureRandom instance for session ID generation using [SHA1PRNG] took [577] milliseconds.
+2021-09-11 02:01:11.244  INFO 9508 --- [restartedMain] com.pzy.BlogApplication                  : Starting BlogApplication using Java 11.0.8 on YZP with PID 9508 (F:\WorkDocument\后端\java主流框架\blog\target\classes started by 86177 in F:\WorkDocument\后端\java主流框架\blog)
+2021-09-11 02:01:11.244 DEBUG 9508 --- [restartedMain] com.pzy.BlogApplication                  : Running with Spring Boot v2.4.5, Spring v5.3.6
+2021-09-11 02:01:11.244  INFO 9508 --- [restartedMain] com.pzy.BlogApplication                  : The following profiles are active: dev
+2021-09-11 02:01:11.291  INFO 9508 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2021-09-11 02:01:11.291  INFO 9508 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2021-09-11 02:01:11.954  INFO 9508 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2021-09-11 02:01:12.032  INFO 9508 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 58 ms. Found 5 JPA repository interfaces.
+2021-09-11 02:01:12.141  WARN 9508 --- [restartedMain] o.m.s.mapper.ClassPathMapperScanner      : No MyBatis mapper was found in '[com.pzy]' package. Please check your configuration.
+2021-09-11 02:01:12.735  INFO 9508 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2021-09-11 02:01:12.751  INFO 9508 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-09-11 02:01:12.751  INFO 9508 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.45]
+2021-09-11 02:01:12.860  INFO 9508 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2021-09-11 02:01:12.860  INFO 9508 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1569 ms
+2021-09-11 02:01:13.184  INFO 9508 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2021-09-11 02:01:13.217  INFO 9508 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.30.Final
+2021-09-11 02:01:13.295  INFO 9508 --- [restartedMain] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2021-09-11 02:01:13.420  INFO 9508 --- [restartedMain] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
+2021-09-11 02:01:14.993  INFO 9508 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+2021-09-11 02:01:18.724  INFO 9508 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-09-11 02:01:18.740  INFO 9508 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2021-09-11 02:01:18.834  INFO 9508 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2021-09-11 02:01:20.485  INFO 9508 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2021-09-11 02:01:20.641  INFO 9508 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2021-09-11 02:01:21.339  INFO 9508 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2021-09-11 02:01:21.355  INFO 9508 --- [restartedMain] com.pzy.BlogApplication                  : Started BlogApplication in 10.651 seconds (JVM running for 12.248)
+2021-09-11 02:01:57.965  INFO 9508 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-09-11 02:01:57.965  INFO 9508 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2021-09-11 02:01:57.965  INFO 9508 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 0 ms
+2021-09-11 02:01:58.516  WARN 9508 --- [http-nio-8080-exec-1] o.a.c.util.SessionIdGeneratorBase        : Creation of SecureRandom instance for session ID generation using [SHA1PRNG] took [527] milliseconds.
+2021-09-11 02:36:50.277  INFO 11720 --- [main] com.pzy.BlogApplicationTests             : Starting BlogApplicationTests using Java 11.0.8 on YZP with PID 11720 (started by 86177 in F:\WorkDocument\���\java�������\blog)
+2021-09-11 02:36:50.277 DEBUG 11720 --- [main] com.pzy.BlogApplicationTests             : Running with Spring Boot v2.4.5, Spring v5.3.6
+2021-09-11 02:36:50.277  INFO 11720 --- [main] com.pzy.BlogApplicationTests             : The following profiles are active: dev
+2021-09-11 02:36:51.273  INFO 11720 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2021-09-11 02:36:51.382  INFO 11720 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 106 ms. Found 5 JPA repository interfaces.
+2021-09-11 02:36:51.586  WARN 11720 --- [main] o.m.s.mapper.ClassPathMapperScanner      : No MyBatis mapper was found in '[com.pzy]' package. Please check your configuration.
+2021-09-11 02:36:52.622  INFO 11720 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2021-09-11 02:36:52.669  INFO 11720 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.30.Final
+2021-09-11 02:36:52.909  INFO 11720 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2021-09-11 02:36:53.632  INFO 11720 --- [main] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
+2021-09-11 02:36:55.403  INFO 11720 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+2021-09-11 02:36:59.393  INFO 11720 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-09-11 02:36:59.409  INFO 11720 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2021-09-11 02:37:02.310  INFO 11720 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2021-09-11 02:37:02.561  INFO 11720 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2021-09-11 02:37:03.327  INFO 11720 --- [main] com.pzy.BlogApplicationTests             : Started BlogApplicationTests in 13.48 seconds (JVM running for 14.828)
+2021-09-11 02:37:03.607  INFO 11720 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2021-09-11 02:37:03.607  INFO 11720 --- [SpringContextShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2021-09-11 02:37:03.607  INFO 11720 --- [SpringContextShutdownHook] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closing ...
+2021-09-11 02:37:03.622  INFO 11720 --- [SpringContextShutdownHook] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closed
