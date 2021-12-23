@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <title th:replace="${title}">Title</title>
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="author" content="老庞">
+    <meta name="description" content="老庞网络博客-欢迎光临~_~">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <link rel="icon" href="../static/images/favicon.ico" th:href="@{/images/favicon.ico}" type="image/x-icon" />
@@ -33,7 +35,7 @@
                 <!--
                         teal ：颜色
                 -->
-                <h2 class="ui white header item"><img src="" th:src="@{/images/logo.png}" style="height: 30px;width: 30px;margin-right: 5px">LPblog</h2>
+                <h2 class="ui white header item"><img src="" th:src="@{/images/logo.png}" style="height: 30px;width: 30px;margin-right: 5px">老庞</h2>
                 <a href="#" th:href="@{/}" class="m-item item m-mobile-hide" th:classappend="${n==1} ? 'active':'' "> <i class="home icon"></i>首页</a>
                 <a href="#" th:href="@{/types/-1}" class="m-item item m-mobile-hide" th:classappend="${n==2} ? 'active':'' "> <i class="idea icon"></i>分类</a>
                 <a href="#" th:href="@{/tags/-1}" class="m-item item m-mobile-hide" th:classappend="${n==3} ? 'active':'' "> <i class="tags icon"></i> 标签</a>
@@ -131,8 +133,8 @@
     </nav>
 
     <!-- 右下导航菜单 -->
-    <div th:fragment="toolbar" id="toolbar" class="ui vertical icon buttons m-fixed m-right-bottom" style="width:40px;height:40px;display: none !important;">
-        <button id="toTop-button" style="background-image: url(https://s3.bmp.ovh/imgs/2021/08/364d86433ece2483.png);background-size: cover;" class="ui white button m-black m-radius-20"><i class="chevron up icon"></i></button>
+    <div th:fragment="toolbar" id="toolbar" class="ui vertical icon buttons m-fixed m-right-bottom" style="width:50px;height:50px;text-align: center">
+        <button id="toTop-button" style="background-image: url(https://i.bmp.ovh/imgs/2021/12/e69c91cfd3be1df9.gif);background-size: cover;" class="ui white button m-black"><i class="chevron up icon"></i></button>
     </div>
 
     <!-- 底部 -->
@@ -185,14 +187,18 @@
 
             <div style="color: #F08047;margin-top: -18px" class="ui inverted m-text-thin m-text-spaced">已经：<span id="htmer_time" class="item m-text-thin"></span></div>
             <!-- 底部备案信息 -->
-            <p class="m-text "></p>
+            <div style="padding-top: 10px">
+                <p class="m-white">豫ICP备2021025919号-1</p>
+                <p class="m-white">Copyright © 2021-Now laopang35.cn All Rights Reserved.</p>
+            </div>
+
         </div>
     </footer>
 
 
 
     <th:block th:fragment="script">
-        <script size="90" alpha="0.2" zIndex="0" src="../static/lib/ribbon/ribbon.js" th:src="@{/lib/ribbon/ribbon.js}"></script>
+        <script size="100" alpha="0.2" zIndex="1" src="../static/lib/ribbon/ribbon.js" th:src="@{/lib/ribbon/ribbon.js}"></script>
         <!-- 引入cdn外部js文件 -->
         <!-- jQuery and JavaScript Bundle with Popper -->
 <!--        <script src="https://cdn.jsdelivr.net/npm/jquery@3.2/dist/jquery.min.js"></script>-->
@@ -210,6 +216,8 @@
         <script src="https://cdn.bootcss.com/bootstrap/3.2.0/js/transition.js"></script>
         <!-- zomm.js -->
         <script src="../static/lib/zoom/zoom.js" th:src="@{/lib/zoom/zoom.js}" ></script>
+        <!-- 播放器插件 -->
+        <script src="https://myhkw.cn/api/player/demo" id="myhk" key="demo" m="1"></script>
         <script th:inline="javascript">
             // 滚动到顶部
             $('#toTop-button').click(function () {

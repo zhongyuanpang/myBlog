@@ -10,7 +10,7 @@
         <link rel="stylesheet" type="text/css" href="../static/css/me.css" th:href="@{/css/me.css}" />
         <link rel="stylesheet" type="text/css" href="../static/css/search.css" th:href="@{/css/search.css}" />
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
-        <title>搜索结果</title>
+        <title>搜索结果 | 老庞</title>
 </head>
 
 <body>
@@ -76,7 +76,7 @@
                             <div class="ui padded">
                                 <div class="ui middle aligned mobile reversed stackable grid " >
                                     <div class="eleven wide column ">
-                                        <h3 class="ui header "><a href="#" th:href="@{/blog/{id}(id=${blog.id})}" target="_blank" th:text="${blog.title}" class="m-999 left-to-right">Title</a></h3>
+                                        <h3 class="ui header "><a href="#" th:href="@{/blog/{id}(id=${blog.id})}"  th:text="${blog.title}" class=" left-to-right">Title</a></h3>
                                         <p class="m-text m-999" th:text="|${blog.description}....|">6月1日0—24时,31个省(自治区、直辖市)和新疆生产建设兵团报告新增确诊病例24例,其中境外输入病例14例(上海6例,福建3例,广东3例,四川1例,云南1例),本土病例10例(均在广东);无...</p>
                                         <div class="ui grid">
                                             <!-- 十一份 -->
@@ -99,12 +99,12 @@
                                             </div>
                                             <!-- 五份 -->
                                             <div class="right aligned three wide column">
-                                                <a href="#" target="_blank" class="ui teal label m-999" th:text="${blog.type.name}">标签</a>
+                                                <a href="#" class="ui teal label m-999" th:text="${blog.type.name}">标签</a>
                                             </div>
                                         </div>
                                     </div>
                                     <div class="five wide column">
-                                        <a href="#" th:href="@{/blog/{id}(id=${blog.id})}" target="_blank">
+                                        <a href="#" th:href="@{/blog/{id}(id=${blog.id})}">
                                             <img src="https://images.unsplash.com/photo-1475776408506-9a5371e7a068?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=654&q=80" th:src="@{${blog.firstPicture}}" alt="" class="ui rounded image firstPicture">
                                         </a>
                                     </div>

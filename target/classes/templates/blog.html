@@ -1,22 +1,27 @@
 <!DOCTYPE html>
 <html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
 
-<head th:replace="_fragments :: head(~{::title})">
+<head>
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" th:attr="content=${blog.title}">
+        <meta name=”keywords” th:attr="content=${blog.description}">
+        <link rel="icon" href="../static/images/favicon.ico" th:href="@{/images/favicon.ico}" type="image/x-icon" />
         <!-- 引入css -->
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.css">
         <!-- 内容排版 -->
-        <link rel="stylesheet" href="../static/css/typo.css">
-        <!-- animate动画 -->
-        <link rel="stylesheet" href="../static/css/animate.css">
+        <link rel="stylesheet" href="../static/css/typo.css" th:href="@{/css/typo.css}">
         <!-- 引入代码高亮 -->
-        <link rel="stylesheet" href="../static/lib/prism/prism.css">
+        <link rel="stylesheet" href="../static/lib/prism/themes/prism-vsc-dark-plus.css" th:href="@{/lib/prism/themes/BlackMac.css}">
         <!-- 引入生成目录 -->
-        <link rel="stylesheet" href="../static/lib/tocbot/tocbot.css">
-        <link rel="stylesheet" type="text/css" href="../static/css/me.css" />
-        <title>博客详情</title>
+        <link rel="stylesheet" href="../static/lib/tocbot/tocbot.css" th:href="@{/lib/tocbot/tocbot.css}">
+        <link rel="stylesheet" type="text/css" href="../static/css/me.css" th:href="@{/css/me.css}" />
+        <link rel="stylesheet" type="text/css" href="../static/css/blog.css" th:href="@{/css/blog.css}" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+        <!-- zoom.css -->
+        <link rel="stylesheet" href="../static/lib/zoom/zoom.css" th:href="@{/lib/zoom/zoom.css}">
+        <title> [[${blog.title}]]! | 老庞</title>
 </head>
 
 <body>
@@ -82,7 +87,7 @@
                         <div class="ui segment right aligned basic">
                                 <div class="ui label black basic m-999" th:text="${blog.flag}">原创</div>
                         </div>
-                        <h3 class="ui header center aligned m-white" th:text="${blog.title}">文章标题</h3>
+                        <h1 class="ui header center aligned m-white " th:text="${blog.title}">文章标题</h1>
                         <br>
                         <!-- 文章内容 -->
                         <div id="content" th:utext="${blog.content}" class="typo typo-selection js-toc-content m-padded-tb-large">
@@ -301,7 +306,6 @@
 </div>
 </div>
         <script size="90" alpha="0.2" zIndex="0" src="../static/lib/ribbon/ribbon.js" th:src="@{/lib/ribbon/ribbon.js}"></script>
-        <!--/*/<th:block th:replace="_fragments :: script">/*/-->
         <script src="https://cdn.jsdelivr.net/npm/jquery@3.2/dist/jquery.min.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/jquery.scrollto@2.1.2/jquery.scrollTo.min.js"></script>
@@ -311,8 +315,42 @@
         <script src="../static/lib/waypoints/jquery.waypoints.min.js" th:src="@{/lib/waypoints/jquery.waypoints.min.js}"></script>
         <!-- 开发环境版本，包含了有帮助的命令行警告 -->
         <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
-        <!--/*/</th:block>/*/-->
         <script src="https://{{cdn}}/prism@v1.x/plugins/autoloader/prism-autoloader.min.js"></script>
+        <!-- zomm.js -->
+        <script src="../static/lib/zoom/zoom.js" th:src="@{/lib/zoom/zoom.js}" ></script>
+        <!-- 看板娘插件 -->
+        <script src="https://eqcn.ajz.miesnfu.com/wp-content/plugins/wp-3d-pony/live2dw/lib/L2Dwidget.min.js"></script>
+
+        <script>
+            L2Dwidget.init({
+                "model": {
+                    //jsonpath替换模型
+                    // 和泉纱雾Sagiri
+                    // https://cdn.jsdelivr.net/gh/cat2233/live2D/Sagiri/model.json
+                    // 凉风青叶Aoba
+                    // https://cdn.jsdelivr.net/gh/cat2233/live2D/aoba/model.json
+                    jsonPath: "https://cdn.jsdelivr.net/gh/cat2233/live2D/Sagiri/model.json",
+                    "scale": 1
+                },
+                "display": {
+                    "position": "left", //看板娘的表现位置
+                    "width": 80,  //宽度
+                    "height": 150, //高度
+                    "hOffset": 0,
+                    "vOffset": 0
+                },
+                "mobile": {
+                    "show": true,
+                    "scale": 0.2
+                },
+                "react": {
+                    "opacityDefault": 1,
+                    "opacityOnHover": 1
+                },
+            });
+
+
+        </script>
         <script th:inline="javascript">
                 $('img').attr('data-action', 'zoom');
 
@@ -382,7 +420,7 @@
                         });
 
                         // 二维码生成
-                        var serurl = /*[[#{blog.serurl}]]*/"47.108.222.21:8080";
+                        var serurl = /*[[#{blog.serurl}]]*/"www.laopang35.com";
                         var url = /*[[@{/blog/{id}(id=${blog.id})}]]*/"";
                         var qrcode = new QRCode("qrcode", {
                                 text: serurl+url,
@@ -467,6 +505,45 @@
                             $("[name='parentComment.id']").val(commentId);
                             $(window).scrollTo($('#comment-form'),500);
                         }
+
+                // 运行时间统计
+                function secondToDate(second) {
+                    if (!second) {
+                        return 0;
+                    }
+                    var time = new Array(0, 0, 0, 0, 0);
+                    if (second >= 365 * 24 * 3600) {
+                        time[0] = parseInt(second / (365 * 24 * 3600));
+                        second %= 365 * 24 * 3600;
+                    }
+                    if (second >= 24 * 3600) {
+                        time[1] = parseInt(second / (24 * 3600));
+                        second %= 24 * 3600;
+                    }
+                    if (second >= 3600) {
+                        time[2] = parseInt(second / 3600);
+                        second %= 3600;
+                    }
+                    if (second >= 60) {
+                        time[3] = parseInt(second / 60);
+                        second %= 60;
+                    }
+                    if (second > 0) {
+                        time[4] = second;
+                    }
+                    return time;
+                }
+                function setTime() {
+                    /*此处为网站的创建时间*/
+                    var create_time = Math.round(new Date(Date.UTC(2021, 0o2, 5,3,5)).getTime() / 1000);
+                    var timestamp = Math.round((new Date().getTime() + 8 * 60 * 60 * 1000) / 1000);
+                    currentTime = secondToDate((timestamp - create_time));
+                    currentTimeHtml = currentTime[0] + '年' + currentTime[1] + '天'
+                        + currentTime[2] + '时' + currentTime[3] + '分' + currentTime[4]
+                        + '秒';
+                    document.getElementById("htmer_time").innerHTML = currentTimeHtml;
+                }
+                setInterval(setTime, 1000);
         </script>
 
 

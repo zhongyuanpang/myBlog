@@ -5,6 +5,8 @@
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="author" content="老庞">
+        <meta name="description" content="老庞的博客-欢迎光临~_~">
         <link rel="icon" href="../static/images/favicon.ico" th:href="@{/images/favicon.ico}" type="image/x-icon" />
         <!-- 引入css -->
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.css">
@@ -12,7 +14,7 @@
         <link rel="stylesheet" type="text/css" href="../static/css/index.css" th:href="@{/css/index.css}" />
         <!-- animate -->
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
-        <title>lp博客</title>
+        <title>老庞</title>
 </head>
 
 <body>
@@ -77,13 +79,13 @@
                                         <!--
                                                 attched：跟上面合并
                                          -->
-                                        <div class="ui attached segment grid blog_list wow animate__animated animate__fadeInLeft"  th:each="blog : ${page.content}">
+                                        <div class="ui attached segment grid blog_list wow animate__animated animate__fadeInLeft m-opacity-mini"  th:each="blog : ${page.content}">
                                                 <!-- 加入vertical 列表就是垂直样式，但是个人觉得不好看先不加 segment -->
                                                 <!-- 列表  -->
                                                 <div class="ui paddded">
                                                         <div class="ui middle aligned mobile reversed stackable grid">
                                                                 <div class="eleven wide column bl_info" style="overflow: hidden !important;">
-                                                                        <h2 class="ui header "><a href="#" th:href="@{/blog/{id}(id=${blog.id})}" target="_blank" th:text="${blog.title}" class="m-black left-to-right">Title</a></h2>
+                                                                        <h2 class="ui header "><a href="#" th:href="@{/blog/{id}(id=${blog.id})}" th:text="${blog.title}" class=" left-to-right">Title</a></h2>
                                                                         <p class="m-text description" th:text="|${blog.description}...|">6月1日0—</p>
                                                                         <div class="ui grid" >
                                                                                 <!-- 十一份 -->
@@ -106,7 +108,7 @@
                                                                                 </div>
                                                                                 <!-- 五份 -->
                                                                                 <div class="right aligned three wide column bl_img">
-                                                                                        <a href="#" target="_blank" class="ui teal label" th:text="${blog.type.name}">标签</a>
+                                                                                        <a href="#" class="ui teal label" th:text="${blog.type.name}">标签</a>
                                                                                 </div>
                                                                         </div>
                                                                 </div>
@@ -160,7 +162,7 @@
                                                 </div>
                                         </div>
                                         <!-- 分类 -->
-                                        <div class="ui segments wow animate__animated animate__fadeInUp" >
+                                        <div class="ui segments wow animate__animated animate__fadeInUp m-opacity" >
                                                 <div class="ui secondary segment">
                                                         <div class="ui two column grid">
                                                                 <div class="column">
@@ -185,7 +187,7 @@
                                         </div>
 
                                         <!-- 标签 -->
-                                        <div class="ui segments m-margin-top-large  wow animate__animated animate__fadeInUp">
+                                        <div class="ui segments m-margin-top-large  wow animate__animated animate__fadeInUp m-opacity">
                                                 <div class="ui secondary segment">
                                                         <div class="ui two column grid">
                                                                 <div class="column">
@@ -206,12 +208,12 @@
                                         </div>
 
                                         <!-- 最新推荐 -->
-                                        <div class="ui segments m-margin-top-large  wow animate__animated animate__fadeInUp">
+                                        <div class="ui segments m-margin-top-large  wow animate__animated animate__fadeInUp m-opacity">
                                                 <div class="ui teal secondary segment">
                                                         <a class="ui red ribbon label"><i class="bookmark icon"></i>最新推荐</a>
                                                 </div>
                                                 <div class="ui segment" th:each="blog : ${recommendBlogs}">
-                                                        <a href="#" th:href="@{/blog/{id}(id=${blog.id})}" class="m-black" target="_blank" th:text="${blog.title}">这是推荐内容</a>
+                                                        <a href="#" th:href="@{/blog/{id}(id=${blog.id})}" class="m-black" th:text="${blog.title}">这是推荐内容</a>
                                                 </div>
                                         </div>
 
@@ -293,8 +295,7 @@
         <script src="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
         <!--/*/</th:block>/*/-->
-        <!-- 播放器插件 -->
-        <script src="https://myhkw.cn/api/player/demo" id="myhk" key="demo" m="1"></script>
+
         <script>
 <!--                -->
                 $(function(){

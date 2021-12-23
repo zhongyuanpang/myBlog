@@ -1,18 +1,12 @@
 @charset "utf-8";
-p code{
-  background: green;
-  padding: 3px;
-  border-radius: 3px;
-  color: white;
-  font-weight: bold;
-  margin: 0 3px;
-}
+
 
 .typo p {
-  font-size: 1em;
-  line-height: 1.8;
+  /*font-size: 0em;*/
+  padding: 10px 0px;
   word-wrap: break-word;
-  font-family: "黑体";
+  color:#fff5f6;
+  /* font-family: "黑体"; */
 }
 
 .typo li {
@@ -55,12 +49,14 @@ p code{
 /* 块/段落引用 */
 .typo blockquote {
   position: relative;
-  color: #ccc;
-  font-weight: 400;
-  border-left: 4px solid #1abc9c;
-  padding-left: 1em;
+  color: #777;
+  font-weight: bold;
+  border-left: 4px solid #f66a0a;
   margin: 1em 1em 1em 0em;
-  background-color: rgba(255,255,255,0.07);
+  background-color: #efefef;
+}
+.typo blockquote p{
+  padding:7px 15px;
 }
 
 @media only screen and ( max-width: 640px ) {
@@ -125,7 +121,7 @@ p code{
 
 /* 让链接在 hover 状态下显示下划线 */
 .typo a {
-  color: #1abc9c;
+  color: green;
 }
 
 .typo a:hover {
@@ -133,12 +129,12 @@ p code{
 }
 
 .typo a {
-  border-bottom: 1px solid #1abc9c;
+  border-bottom: 1px solid #1458d4;
 }
 
 .typo a:hover {
-  border-bottom-color: #555;
-  color: #555;
+  border-bottom-color: #1abc9c;
+  color: #1abc9c;
   text-decoration: none;
 }
 
@@ -203,9 +199,8 @@ code[class*="language-"], pre[class*="language-"]{
   color: #888;
 }
 
-.typo strong,.typo  b {
+.typo strong,.typo b {
   font-weight: bold;
-  color: white;
 }
 
 /* 可拖动文件添加拖动手势 */
@@ -244,7 +239,7 @@ code[class*="language-"], pre[class*="language-"]{
 /* 保证块/段落之间的空白隔行 */
 .typo p, .typo pre, .typo ul, .typo ol, .typo dl, .typo form, .typo hr, .typo table,
 .typo-p, .typo-pre, .typo-ul, .typo-ol, .typo-dl, .typo-form, .typo-hr, .typo-table, blockquote {
-  /*margin-bottom: 1.2em;*/
+  margin-bottom: 1.2em;
 }
 
 .typo h1,.typo  h2,.typo  h3,.typo  h4,.typo  h5,.typo  h6 {
@@ -270,6 +265,7 @@ code[class*="language-"], pre[class*="language-"]{
   font-size: 1.8em;
 }
 
+
 .typo h2, .typo-h2 {
   font-size: 1.6em;
 }
@@ -284,6 +280,16 @@ code[class*="language-"], pre[class*="language-"]{
 
 .typo h5, .typo h6, .typo-h5, .typo-h6 {
   font-size: 1em;
+}
+
+.typo h1:hover, .typo-h1:hover,
+.typo h2:hover, .typo-h2:hover,
+.typo h3:hover, .typo-h3:hover,
+.typo h4:hover, .typo-h4:hover,
+.typo h5:hover, .typo-h5:hover{
+  cursor: pointer;
+  margin-left: 15px;
+  transition: all 0.3s linear 0s;
 }
 
 /* 在文章中，应该还原 ul 和 ol 的样式 */
@@ -354,6 +360,9 @@ code[class*="language-"], pre[class*="language-"]{
 /* Responsive images */
 .typo img {
   max-width: 100%;
+}
+.typo img:hover{
+  transform: scale(1.2);
 }
 
 
