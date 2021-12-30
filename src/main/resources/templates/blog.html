@@ -58,23 +58,23 @@
         <div style="height: 100px"></div>
 
         <!-- 中间内容 -->
-        <div id="waypoint" class="m-padded-tb-big inverted m-container-tiny animated fadeIn b_blog_content">
+        <div id="waypoint" class="m-padded-tb-big inverted m-container animated fadeIn b_blog_content" style="background: rgba(0,0,0,0.1)">
             <div class="ui">
                     <div class="ui top attached ">
                         <div class="ui horizontal link list">
                                 <div class="item">
                                         <img src="https://images.unsplash.com/photo-1590806758167-be790f75a167?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxleHBsb3JlLWZlZWR8NTV8fHxlbnwwfHx8fA%3D%3D&auto=format&fit=crop&w=500&q=60" th:src="@{${blog.user.avatar}}" alt="" class="ui avatar image">
                                         <div class="content">
-                                                <div class="header m-999" th:text="${blog.user.nickname}">庞中原</div>
+                                                <div class="header m-white" th:text="${blog.user.nickname}">庞中原</div>
                                         </div>
                                 </div>
                                 <div class="item">
-                                        <i class="calendar alternate outline icon m-999"></i>
-                                        <span class="m-999" th:text="${#dates.format(blog.updateTime,'yyyy-MM-dd')}">2021-06-03</span>
+                                        <i class="calendar alternate outline icon m-white"></i>
+                                        <span class="m-white" th:text="${#dates.format(blog.updateTime,'yyyy-MM-dd')}">2021-06-03</span>
                                 </div>
                                 <div class="item">
-                                    <i class="eye icon m-999"></i>
-                                    <span class="m-999" th:text="${blog.views}">999</span>
+                                    <i class="eye icon m-white"></i>
+                                    <span class="m-white" th:text="${blog.views}">999</span>
                                 </div>
                         </div>
                     </div>
@@ -150,7 +150,7 @@
                             <div id="comment-container" class="ui tealsegment">
                                 <div th:fragment="commentList">
                                     <div class="ui threaded comments" style="max-width: 100%">
-                                        <h3 class="ui dividing header m-999">评论</h3>
+                                        <h3 class="ui dividing header m-white">评论</h3>
                                         <div class="comment" th:each="comment : ${comments}">
                                             <a class="avatar">
                                                 <img src="../static/images/programmer.jpg" th:src="@{${comment.avatar}}">
@@ -248,6 +248,23 @@
         <div id="qrcode" class="ui wechat-QR flowing popup transition hidden" style="width: 130px !important;">
         </div>
 
+        <!--    背景轮播    -->
+        <div id="bg_wrap" th:fragment="bgCover">
+            <div><img src="http://p1.qhimg.com/bdm/1024_768_85/t01eb085ab89fb092f9.jpg" alt=""width="100%"height="100%"/></div>
+            <div><img src="http://p8.qhimg.com/bdm/1024_768_85/t0182c808ffe79247b6.jpg" alt=""width="100%"height="100%"/></div>
+            <div><img src="http://p5.qhimg.com/bdm/1024_768_85/t01344a9e6aeccb2a41.jpg" alt=""width="100%"height="100%"/></div>
+            <div><img src="http://p4.qhimg.com/bdm/1024_768_85/t0197904a3d6b9ceaab.jpg" alt=""width="100%"height="100%"/></div>
+            <div><img src="http://p5.qhimg.com/bdm/1024_768_85/t01344a9e6aeccb2a41.jpg" alt=""width="100%"height="100%"/></div>
+            <div><img src="http://p5.qhimg.com/bdm/1024_768_85/t01344a9e6aeccb2a41.jpg" alt=""width="100%"height="100%"/></div>
+            <div><img src="http://p6.qhimg.com/bdm/1024_768_85/t0194bc517954164464.jpg" alt=""width="100%"height="100%"/></div>
+            <div><img src="http://p6.qhimg.com/bdm/1024_768_85/t0194bc517954164464.jpg" alt=""width="100%"height="100%"/></div>
+            <div><img src="http://p0.qhimg.com/bdm/1024_768_85/t01e8bc75647c7de4ef.jpg" alt=""width="100%"height="100%"/></div>
+            <div><img src="http://p2.qhimg.com/bdm/1024_768_85/t01b4e5e77a234800a2.jpg" alt=""width="100%"height="100%"/></div>
+            <div><img src="http://p4.qhimg.com/bdm/1024_768_85/t015da4a4741eefa8e6.jpg" alt=""width="100%"height="100%"/></div>
+            <div><img src="http://p0.qhimg.com/bdm/1024_768_85/t016eb5915bd9b4618e.jpg" alt=""width="100%"height="100%"/></div>
+            <div><img src="http://p0.qhimg.com/bdm/1024_768_85/t01a28d4b7b5a3d90b3.jpg" alt=""width="100%"height="100%"/></div>
+        </div>
+
 
 
         <br>
@@ -305,7 +322,7 @@
 
 </div>
 </div>
-        <script size="90" alpha="0.2" zIndex="0" src="../static/lib/ribbon/ribbon.js" th:src="@{/lib/ribbon/ribbon.js}"></script>
+<!--        <script size="90" alpha="0.2" zIndex="0" src="../static/lib/ribbon/ribbon.js" th:src="@{/lib/ribbon/ribbon.js}"></script>-->
         <script src="https://cdn.jsdelivr.net/npm/jquery@3.2/dist/jquery.min.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/jquery.scrollto@2.1.2/jquery.scrollTo.min.js"></script>
@@ -318,6 +335,7 @@
         <script src="https://{{cdn}}/prism@v1.x/plugins/autoloader/prism-autoloader.min.js"></script>
         <!-- zomm.js -->
         <script src="../static/lib/zoom/zoom.js" th:src="@{/lib/zoom/zoom.js}" ></script>
+        <script src="../static/lib/zoom/transition.js" th:src="@{/lib/zoom/transition.js}" ></script>
         <!-- 看板娘插件 -->
         <script src="https://eqcn.ajz.miesnfu.com/wp-content/plugins/wp-3d-pony/live2dw/lib/L2Dwidget.min.js"></script>
 
@@ -348,6 +366,20 @@
                     "opacityOnHover": 1
                 },
             });
+
+            //背景轮播
+            (function(){
+                var timer=null;
+                oImg=document.querySelectorAll('#bg_wrap div');
+                var len=oImg.length;
+                var index=0;
+                timer=setInterval(function () {
+                    oImg[index].style.opacity=0;
+                    index++;
+                    index%=len;
+                    oImg[index].style.opacity=1;
+                },5000)
+            })();
 
 
         </script>

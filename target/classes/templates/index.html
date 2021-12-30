@@ -48,15 +48,14 @@
                 </a>
         </nav>
 
-        <section>
+        <section class="z-88">
                 <img src="../static/images/mountain.png" th:src="@{https://api.ixiaowai.cn/gqapi/gqapi.php}" id="mountain">
                 <h5 id="text">🐟 </h5>
                 <h4 id="text"> 那时候心里有人,再黑暗也有阳光</h4>
         </section>
 
         <!-- 中间内容 -->
-        <div class="m-padded-tb-big" id="app">
-
+        <div class="m-padded-tb-big " id="app">
                 <div class="ui m-container-big">
                         <div class="ui stackable grid">
                                 <!-- 中间/ 左边博客列表区域 -->
@@ -64,13 +63,13 @@
                                         <!-- Header -->
                                         <div class="ui top attached ">
                                                 <!-- 注意grid要写在column后面 不然会效果失效 -->
-                                                <div class="ui middle aligned two column grid">
-                                                        <div class="column">
-                                                                <h3 class="ui teal header">博客</h3>
+                                                <div class="ui middle aligned two column grid ">
+                                                        <div class="column ">
+                                                                <h3 class="ui header m-teal m-white ">博客</h3>
                                                         </div>
-                                                        <div class=" right aligned column m-white">
+                                                        <div class=" right aligned column m-white ">
 <!--                                                                                                                            totalElement获取page的数据长度                                                      -->
-                                                                共 <h2 class="ui orange header m-inline-block m-text-thin" th:text="${page.totalElements}">14</h2> 篇
+                                                                共 <h2 class="ui m-teal header m-inline-block m-text-thin" th:text="${page.totalElements}">14</h2> 篇
                                                         </div>
                                               </div>
                                         </div>
@@ -79,7 +78,7 @@
                                         <!--
                                                 attched：跟上面合并
                                          -->
-                                        <div class="ui attached segment grid blog_list wow animate__animated animate__fadeInLeft m-opacity-mini"  th:each="blog : ${page.content}">
+                                        <div class="ui attached blur m-opacity-mini segment grid blog_list wow animate__animated animate__fadeInLeft"  th:each="blog : ${page.content}">
                                                 <!-- 加入vertical 列表就是垂直样式，但是个人觉得不好看先不加 segment -->
                                                 <!-- 列表  -->
                                                 <div class="ui paddded">
@@ -123,14 +122,14 @@
 
 
                                         <!-- Footer -->
-                                        <div class="ui attached m-shadow-82C6E0" th:if="${page.totalPages}>1">
+                                        <div class="ui attached " th:if="${page.totalPages}>1">
                                                 <!-- 注意grid要写在column后面 不然会效果失效 -->
-                                                <div class="ui middle aligned two column grid ">
-                                                        <div class="column">
-                                                                <a th:href="@{/(page=${page.number}-1)}"  th:unless="${page.first}" class="ui secondary mini button">上一页</a>
+                                                <div class="ui middle aligned two column grid  ">
+                                                        <div class="column ">
+                                                                <a th:href="@{/(page=${page.number}-1)}"  th:unless="${page.first}" class="ui secondary mini button ">上一页</a>
                                                         </div>
-                                                        <div class=" right aligned column">
-                                                                <a th:href="@{/(page=${page.number}+1)}" th:unless="${page.last}" class="ui secondary mini button">下一页</a>
+                                                        <div class=" right aligned column ">
+                                                                <a th:href="@{/(page=${page.number}+1)}" th:unless="${page.last}" class="ui secondary mini button ">下一页</a>
                                                         </div>
                                                 </div>
                                         </div>
@@ -239,6 +238,12 @@
                 <button class="ui white  wechat button"><i class="weixin icon"></i></button>
                 <button id="toTop-button"  class="ui white button"><i class="chevron up icon"></i></button>
         </div>
+
+
+        <!--    背景轮播    -->
+        <div th:replace="_fragments :: bgCover" >
+        </div>
+
 
         <!-- 底部 -->
         <footer th:replace="_fragments :: footer" class="ui inverted vertical stackable segment m-padded-tb-massive">

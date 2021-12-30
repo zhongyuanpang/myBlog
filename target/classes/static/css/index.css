@@ -61,7 +61,9 @@ section img{
     /*opacity: 0.7;*/
 }
 .blog_list:hover{
-    box-shadow: 0px 0px 20px #82C6E0 !important;
+    /*box-shadow: 0px 0px 20px #82C6E0 !important;*/
+    backdrop-filter: blur(20px) !important;
+    cursor: pointer;
     transform: scale(1.02);
 }
 .description{

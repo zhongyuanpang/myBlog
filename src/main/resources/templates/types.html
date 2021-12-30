@@ -79,7 +79,8 @@
                     <!-- 文章列表 -->
                     <div class="ui ">
                               <!-- 列表 -->
-                        <div class="ui attached m-margin-top-small blog_list wow animate__animated animate__fadeInRightBig" th:each="blog : ${page.content}">
+
+                        <div class="ui attached blur m-opacity-mini segment grid blog_list wow animate__animated animate__fadeInRightBig" th:each="blog : ${page.content}">
                             <!-- 加入vertical 列表就是垂直样式，但是个人觉得不好看先不加 segment -->
                             <!-- 列表  -->
                             <div class="ui padded">
@@ -122,6 +123,10 @@
                         </div>
 
                     </div>
+
+                    <!--    背景轮播    -->
+                    <div th:replace="_fragments :: bgCover" ></div>
+
                       <!-- Footer -->
                     <div class="ui attached m-shadow-82C6E0 " th:if="${page.totalPages}>1">
                         <!-- 注意grid要写在column后面 不然会效果失效 -->

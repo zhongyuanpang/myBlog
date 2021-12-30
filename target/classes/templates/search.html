@@ -5,6 +5,7 @@
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="icon" href="../static/images/favicon.ico" th:href="@{/images/favicon.ico}" type="image/x-icon" />
         <!-- 引入css -->
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.css">
         <link rel="stylesheet" type="text/css" href="../static/css/me.css" th:href="@{/css/me.css}" />
@@ -57,9 +58,9 @@
                         <!-- 注意grid要写在column后面 不然会效果失效 -->
                             <div class="ui middle aligned two column grid">
                                     <div class="column">
-                                            <h3 class="ui m-999 header">搜索结果</h3>
+                                            <h3 class="ui m-white header">搜索结果</h3>
                                     </div>
-                                    <div class=" right aligned column m-999">
+                                    <div class=" right aligned column m-white">
                                             共 <h2 class="ui orange header m-inline-block m-text-thin" th:text="${page.totalElements}">14</h2> 个
                                     </div>
                             </div>
@@ -77,7 +78,7 @@
                                 <div class="ui middle aligned mobile reversed stackable grid " >
                                     <div class="eleven wide column ">
                                         <h3 class="ui header "><a href="#" th:href="@{/blog/{id}(id=${blog.id})}"  th:text="${blog.title}" class=" left-to-right">Title</a></h3>
-                                        <p class="m-text m-999" th:text="|${blog.description}....|">6月1日0—24时,31个省(自治区、直辖市)和新疆生产建设兵团报告新增确诊病例24例,其中境外输入病例14例(上海6例,福建3例,广东3例,四川1例,云南1例),本土病例10例(均在广东);无...</p>
+                                        <p class="m-text m-white" th:text="|${blog.description}....|">6月1日0—24时,31个省(自治区、直辖市)和新疆生产建设兵团报告新增确诊病例24例,其中境外输入病例14例(上海6例,福建3例,广东3例,四川1例,云南1例),本土病例10例(均在广东);无...</p>
                                         <div class="ui grid">
                                             <!-- 十一份 -->
                                             <div class="thirteen wide column">
@@ -90,10 +91,10 @@
                                                     </div>
                                                     <div class="item">
                                                         <!--                                                                                                                                                                    格式化时间  #dates.format(时间,'yyyy-MM-dd')     -->
-                                                        <i class="calendar alternate outline icon m-999 m-ft-small"></i> <span class="m-999 m-ft-small" th:text="${#dates.format(blog.updateTime,'yyyy-MM-dd')}">2021-06-03</span>
+                                                        <i class="calendar alternate outline icon m-white m-ft-small"></i> <span class="m-white m-ft-small" th:text="${#dates.format(blog.updateTime,'yyyy-MM-dd')}">2021-06-03</span>
                                                     </div>
                                                     <div class="item">
-                                                        <i class="eye icon m-999 m-ft-small"></i> <span class="m-999 m-ft-small" th:text="${blog.views}">999</span>
+                                                        <i class="eye icon m-white m-ft-small"></i> <span class="m-white m-ft-small" th:text="${blog.views}">999</span>
                                                     </div>
                                                 </div>
                                             </div>
@@ -113,6 +114,11 @@
                         </div>
 
 
+                    </div>
+
+
+                    <!--    背景轮播    -->
+                    <div th:replace="_fragments :: bgCover" >
                     </div>
 
                     <!-- Footer -->

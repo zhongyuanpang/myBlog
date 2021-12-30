@@ -9,6 +9,13 @@
   /* font-family: "黑体"; */
 }
 
+p code{
+  padding: 3px 5px;
+  margin: 0px 5px;
+  border-radius: 5px;
+  background: green;
+}
+
 .typo li {
   font-weight: 300;
   padding: 4px 0;

@@ -1,4 +1,4 @@
 -------------------------------------------------------------------------------
 Test set: com.pzy.BlogApplicationTests
 -------------------------------------------------------------------------------
-Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 10.207 s - in com.pzy.BlogApplicationTests
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 10.054 s - in com.pzy.BlogApplicationTests
