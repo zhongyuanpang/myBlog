@@ -3,6 +3,7 @@
 
 .typo p {
   /*font-size: 0em;*/
+  font-size: 16px;
   padding: 10px 0px;
   word-wrap: break-word;
   color:#fff5f6;
@@ -17,6 +18,7 @@ p code{
 }
 
 .typo li {
+  color: white;
   font-weight: 300;
   padding: 4px 0;
 }

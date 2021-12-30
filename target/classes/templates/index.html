@@ -84,7 +84,7 @@
                                                 <div class="ui paddded">
                                                         <div class="ui middle aligned mobile reversed stackable grid">
                                                                 <div class="eleven wide column bl_info" style="overflow: hidden !important;">
-                                                                        <h2 class="ui header "><a href="#" th:href="@{/blog/{id}(id=${blog.id})}" th:text="${blog.title}" class=" left-to-right">Title</a></h2>
+                                                                        <h2 class="ui header "><a href="#" th:href="@{/blog/{id}(id=${blog.id})}" th:text="${blog.title}" class="m-teal left-to-right">Title</a></h2>
                                                                         <p class="m-text description" th:text="|${blog.description}...|">6月1日0—</p>
                                                                         <div class="ui grid" >
                                                                                 <!-- 十一份 -->
@@ -193,7 +193,7 @@
                                                                         <a class="ui orange ribbon label"><i class="tags icon"></i>标签</a>
                                                                 </div>
                                                                 <div class="right aligned column">
-                                                                        <a href="#" th:href="@{tags/-1}">更多 <i class="angle double right icon"></i></a>
+                                                                        <a href="#" style="color: black;font-size: 1.1em;font-weight: bold" th:href="@{tags/-1}">更多 <i class="angle double right icon"></i></a>
                                                                 </div>
                                                         </div>
                                                 </div>
