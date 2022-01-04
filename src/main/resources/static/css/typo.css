@@ -58,11 +58,12 @@ p code{
 /* 块/段落引用 */
 .typo blockquote {
   position: relative;
-  color: #777;
+  color: blue !important;
   font-weight: bold;
   border-left: 4px solid #f66a0a;
   margin: 1em 1em 1em 0em;
-  background-color: #efefef;
+  background-color: #A9A9A9;
+  /*opacity: .9;*/
 }
 .typo blockquote p{
   padding:7px 15px;
